@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { RepositoriesEditor } from "@/components/settings/repositories-editor";
 import { SecretField } from "@/components/settings/secret-field";
 import {
-  getAdminToken, setAdminToken, settingsApi, SettingsRequestError,
+  settingsApi, SettingsRequestError,
   type ConnectionCheck, type ProfileSettings, type ProfileSummary, type ProfileUpdate,
   type RepositorySettings, type SecretChange, type SecretName, type SettingsStatus,
 } from "@/lib/api";
@@ -173,20 +173,17 @@ export default function SettingsPage() {
   const [notice, setNotice] = useState<{ kind: "ok" | "error"; text: string } | null>(null);
   const [checks, setChecks] = useState<ConnectionCheck[] | null>(null);
   const [busy, setBusy] = useState<"save" | "test" | "activate" | "delete" | null>(null);
-  const [token, setToken] = useState("");
   const [loadError, setLoadError] = useState(false);
 
   const apply = useCallback((result: Loaded, focus?: string) => {
     if ("error" in result) {
       if (result.error === "settings_unavailable") {
-        setStatus({ available: false, writable: false, admin_required: false, active: null });
+        setStatus({ available: false, active: null });
       } else {
         setLoadError(true);
       }
       return;
     }
-    // sessionStorage exists only in the browser: read it after the first render.
-    setToken((value) => value || getAdminToken());
     setStatus(result.status);
     setProfiles(result.list);
     setLoadError(false);
@@ -283,7 +280,7 @@ export default function SettingsPage() {
     setNotice(null);
   }
 
-  const readOnly = !status?.writable || (status.admin_required && !token);
+  const readOnly = !status?.available;
   const current = profiles.find((p) => p.id === selected);
   const secret = (name: SecretName) => view?.secrets[name];
   const bound = (field: string) => (creating ? undefined : view?.env_bound[field]);
@@ -297,14 +294,6 @@ export default function SettingsPage() {
 
       {loadError && <p role="alert" className="mt-6 rounded-2xl border-2 border-ink-900 p-4 text-sm">Não foi possível acessar o backend. Verifique se ele está em execução.</p>}
       {status && !status.available && <p className="mt-6 rounded-2xl bg-ink-200/60 p-4 text-sm">As configurações não podem ser editadas nesta execução do backend.</p>}
-      {status?.available && !status.writable && <p className="mt-6 rounded-2xl bg-ink-200/60 p-4 text-sm">Somente leitura: sem <code className="font-mono">ADMIN_TOKEN</code>, as configurações só podem ser alteradas a partir da máquina do backend.</p>}
-      {status?.admin_required && <form className="mt-6 flex flex-wrap items-end gap-3 rounded-2xl border border-brand-200 bg-brand-0/30 p-4"
-        onSubmit={(event) => { event.preventDefault(); setAdminToken(token); setNotice({ kind: "ok", text: "Token guardado nesta aba do navegador." }); }}>
-        <label className="min-w-64 flex-1 text-sm font-medium">Token de administrador
-          <input type="password" value={token} onChange={(event) => setToken(event.target.value)} autoComplete="off" className={inputClass()} />
-        </label>
-        <button type="submit" className="rounded-full bg-ink-900 px-5 py-2.5 text-sm font-bold text-white">Usar token</button>
-      </form>}
 
       {status?.available && <div className="mt-8 grid gap-6 md:grid-cols-[15rem_1fr]">
         <aside aria-label="Perfis" className="space-y-2">

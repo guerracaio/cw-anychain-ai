@@ -1,7 +1,6 @@
 """Settings API: network profiles edited from the UI. Secret values are write-only."""
 
 import asyncio
-import hmac
 import logging
 from typing import Literal
 
@@ -19,13 +18,8 @@ from app.services.http import JsonHttpClient, UpstreamError
 
 logger = logging.getLogger("anychain.settings")
 router = APIRouter(prefix="/api/settings")
-LOOPBACK = {"127.0.0.1", "::1", "localhost"}
 MESSAGES = {
     "settings_unavailable": "As configurações não podem ser editadas nesta execução.",
-    "admin_token_required": "Informe o token de administrador para alterar configurações.",
-    "admin_token_invalid": "Token de administrador inválido.",
-    "local_only": "Sem ADMIN_TOKEN, as configurações só podem ser alteradas a partir desta "
-    "máquina. Defina ADMIN_TOKEN para editar remotamente.",
     "invalid_profile_id": "Identificador de perfil inválido: use letras minúsculas, números e -.",
     "profile_not_found": "Perfil não encontrado.",
     "profile_exists": "Já existe um perfil com esse identificador.",
@@ -114,21 +108,6 @@ def store_of(request: Request) -> ConfigStore:
     return store
 
 
-def authorize(request: Request) -> ConfigStore:
-    """Writes need ADMIN_TOKEN when it is set; otherwise only loopback clients may write."""
-    store = store_of(request)
-    expected = request.app.state.admin_token
-    if expected:
-        given = request.headers.get("X-Admin-Token")
-        if not given:
-            raise SettingsError(401, "admin_token_required")
-        if not hmac.compare_digest(given.encode(), expected.encode()):
-            raise SettingsError(403, "admin_token_invalid")
-    elif not request.client or request.client.host not in LOOPBACK:
-        raise SettingsError(403, "local_only")
-    return store
-
-
 def lock_of(request: Request) -> asyncio.Lock:
     state = request.app.state
     if not hasattr(state, "settings_lock"):
@@ -149,14 +128,8 @@ def audit(action: str, profile_id: str, result: str) -> None:
 @router.get("/status")
 async def status(request: Request) -> dict:
     store = request.app.state.store
-    writable = store is not None and (
-        bool(request.app.state.admin_token)
-        or bool(request.client and request.client.host in LOOPBACK)
-    )
     return {
         "available": store is not None,
-        "writable": writable,
-        "admin_required": bool(request.app.state.admin_token),
         "active": store.active() if store else None,
     }
 
@@ -176,7 +149,7 @@ async def profile(profile_id: str, request: Request) -> dict:
 
 @router.put("/profiles/{profile_id}")
 async def save_profile(profile_id: str, body: ProfileUpdate, request: Request) -> dict:
-    store = authorize(request)
+    store = store_of(request)
     async with lock_of(request):
         try:
             if store.exists(profile_id):
@@ -199,7 +172,7 @@ async def save_profile(profile_id: str, body: ProfileUpdate, request: Request) -
 
 @router.delete("/profiles/{profile_id}")
 async def delete_profile(profile_id: str, request: Request) -> dict:
-    store = authorize(request)
+    store = store_of(request)
     async with lock_of(request):
         try:
             store.delete(profile_id)
@@ -212,7 +185,7 @@ async def delete_profile(profile_id: str, request: Request) -> dict:
 
 @router.post("/active")
 async def activate(body: ActivateInput, request: Request) -> dict:
-    store = authorize(request)
+    store = store_of(request)
     async with lock_of(request):
         try:
             config = store.load(body.id)
@@ -282,7 +255,7 @@ async def run_checks(config: AppConfig, request: Request) -> list[dict]:
 
 @router.post("/profiles/{profile_id}/test")
 async def test_profile(profile_id: str, request: Request) -> dict:
-    store = authorize(request)
+    store = store_of(request)
     try:
         config = store.load(profile_id)
     except ProfileError as exc:

@@ -14,7 +14,6 @@ MAINNET = PROJECT_ROOT / "config" / "ethereum-mainnet.example.yaml"
 SEPOLIA = PROJECT_ROOT / "config" / "sepolia.example.yaml"
 RPC_SECRET = "https://rpc.example/secret-rpc-key"
 ENVIRON = {"RPC_URL": RPC_SECRET, "LLM_PROVIDER": "", "LLM_MODEL": "", "GITHUB_TOKEN": ""}
-TOKEN = {"X-Admin-Token": "admin-secret"}
 
 
 class Upstream:
@@ -43,11 +42,10 @@ def make_store(tmp_path: Path, environ=None) -> ConfigStore:
     return store
 
 
-def client(tmp_path, upstream=None, admin_token="admin-secret", store=None):
+def client(tmp_path, upstream=None, store=None):
     app = create_app(
         transport=httpx.MockTransport(upstream or Upstream()),
         store=store or make_store(tmp_path),
-        admin_token=admin_token,
     )
     return TestClient(app)
 
@@ -109,21 +107,6 @@ def test_reads_never_expose_secret_values(tmp_path):
     assert view["repositories"][0]["branch"] == "master"
 
 
-def test_writes_require_the_admin_token_or_a_local_client(tmp_path):
-    with client(tmp_path) as api:
-        url = "/api/settings/profiles/ethereum-mainnet"
-        assert api.put(url, json=update_body()).status_code == 401
-        wrong = api.put(url, json=update_body(), headers={"X-Admin-Token": "nope"})
-        assert wrong.status_code == 403
-        assert api.put(url, json=update_body(), headers=TOKEN).status_code == 200
-    # Without ADMIN_TOKEN only loopback clients may write (TestClient is not loopback).
-    with client(tmp_path / "b", admin_token=None) as api:
-        response = api.put("/api/settings/profiles/ethereum-mainnet", json=update_body())
-        assert response.status_code == 403
-        assert response.json()["error"]["code"] == "local_only"
-        assert api.get("/api/settings/status").json()["writable"] is False
-
-
 def test_saving_keeps_env_placeholders_for_unchanged_values(tmp_path):
     network = {
         "name": "Mainnet (UI)",
@@ -135,7 +118,6 @@ def test_saving_keeps_env_placeholders_for_unchanged_values(tmp_path):
         response = api.put(
             "/api/settings/profiles/ethereum-mainnet",
             json=update_body(network=network),
-            headers=TOKEN,
         )
         assert response.status_code == 200, response.text
         # The active profile is applied without a restart.
@@ -151,7 +133,7 @@ def test_secret_actions_set_clear_and_defer_to_the_environment(tmp_path):
     with client(tmp_path) as api:
 
         def save(**secrets):
-            response = api.put(url, json=update_body(secrets=secrets), headers=TOKEN)
+            response = api.put(url, json=update_body(secrets=secrets))
             assert response.status_code == 200, response.text
             assert "sk-test-value" not in response.text and "other-node" not in response.text
             return response.json()["secrets"]
@@ -178,7 +160,7 @@ def test_invalid_updates_name_fields_without_echoing_values(tmp_path):
         secrets={"rpc_url": {"action": "set", "value": "not a url secret-value"}},
     )
     with client(tmp_path) as api:
-        response = api.put("/api/settings/profiles/ethereum-mainnet", json=body, headers=TOKEN)
+        response = api.put("/api/settings/profiles/ethereum-mainnet", json=body)
     assert response.status_code == 422
     error = response.json()["error"]
     assert error["code"] == "invalid_config"
@@ -202,26 +184,21 @@ def test_create_copy_activate_and_delete_profiles(tmp_path):
             explorer={"base_url": "https://explorer.x.example"},
             repositories=[],
         )
-        created = api.put("/api/settings/profiles/rede-x", json=body, headers=TOKEN)
+        created = api.put("/api/settings/profiles/rede-x", json=body)
         assert created.status_code == 200, created.text
         copy = api.put(
             "/api/settings/profiles/rede-y",
             json={**body, "copy_from": "ethereum-mainnet"},
-            headers=TOKEN,
         )
         assert copy.status_code == 200
         assert copy.json()["secrets"]["rpc_url"]["env_var"] == "RPC_URL"
         again = api.put(
             "/api/settings/profiles/rede-x",
             json={**body, "copy_from": "sepolia"},
-            headers=TOKEN,
         )
         assert again.status_code == 409
 
-        assert (
-            api.post("/api/settings/active", json={"id": "rede-x"}, headers=TOKEN).status_code
-            == 200
-        )
+        assert api.post("/api/settings/active", json={"id": "rede-x"}).status_code == 200
         network = api.get("/api/network").json()
         assert (network["id"], network["chain_id"], network["native_currency"]) == (
             "rede-x",
@@ -233,9 +210,9 @@ def test_create_copy_activate_and_delete_profiles(tmp_path):
         api.post("/api/analyze", json={"tx_hash": TX})
         assert "explorer.x.example" in upstream.hosts and "eth.blockscout.com" not in upstream.hosts
 
-        deleted = api.delete("/api/settings/profiles/rede-x", headers=TOKEN)
+        deleted = api.delete("/api/settings/profiles/rede-x")
         assert deleted.status_code == 409
-        assert api.delete("/api/settings/profiles/rede-y", headers=TOKEN).status_code == 200
+        assert api.delete("/api/settings/profiles/rede-y").status_code == 200
         assert api.get("/api/settings/profiles/rede-y").status_code == 404
     # The active profile survives a restart.
     state = json.loads((tmp_path / "local/state.json").read_text(encoding="utf-8"))
@@ -245,9 +222,7 @@ def test_create_copy_activate_and_delete_profiles(tmp_path):
 @pytest.mark.parametrize("profile_id", ["Bad_ID", "a..b", "-x"])
 def test_profile_ids_cannot_escape_the_profiles_folder(tmp_path, profile_id):
     with client(tmp_path) as api:
-        response = api.put(
-            f"/api/settings/profiles/{profile_id}", json=update_body(), headers=TOKEN
-        )
+        response = api.put(f"/api/settings/profiles/{profile_id}", json=update_body())
     assert response.status_code == 400
     assert response.json()["error"]["code"] == "invalid_profile_id"
 
@@ -256,15 +231,13 @@ def test_connection_check_reports_each_dependency(tmp_path):
     with client(tmp_path, Upstream(chain_id=1)) as api:
         checks = {
             c["id"]: (c["ok"], c["code"])
-            for c in api.post("/api/settings/profiles/ethereum-mainnet/test", headers=TOKEN).json()[
-                "checks"
-            ]
+            for c in api.post("/api/settings/profiles/ethereum-mainnet/test").json()["checks"]
         }
         assert checks["explorer"] == (True, "ok")
         assert checks["rpc"] == (True, "ok")
         assert checks["repository.circlefin/stablecoin-evm"] == (True, "ok")
         assert checks["llm"] == (None, "llm_not_configured")
-        sepolia = api.post("/api/settings/profiles/sepolia/test", headers=TOKEN).json()["checks"]
+        sepolia = api.post("/api/settings/profiles/sepolia/test").json()["checks"]
     rpc = next(c for c in sepolia if c["id"] == "rpc")
     assert (rpc["ok"], rpc["code"]) == (False, "chain_mismatch")
 

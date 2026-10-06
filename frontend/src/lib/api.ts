@@ -298,8 +298,6 @@ export interface ProfileUpdate {
 
 export interface SettingsStatus {
   available: boolean;
-  writable: boolean;
-  admin_required: boolean;
   active: string | null;
 }
 
@@ -316,22 +314,11 @@ export class SettingsRequestError extends Error {
   }
 }
 
-const ADMIN_KEY = "anychain.adminToken";
-
-export function getAdminToken(): string {
-  try { return sessionStorage.getItem(ADMIN_KEY) ?? ""; } catch { return ""; }
-}
-
-export function setAdminToken(token: string) {
-  try { if (token) sessionStorage.setItem(ADMIN_KEY, token); else sessionStorage.removeItem(ADMIN_KEY); } catch { /* storage unavailable */ }
-}
-
 async function settingsRequest<T>(path: string, init: RequestInit = {}): Promise<T> {
-  const token = getAdminToken();
   const response = await fetch(`/api/settings${path}`, {
     ...init,
     cache: "no-store",
-    headers: { "Content-Type": "application/json", ...(token ? { "X-Admin-Token": token } : {}), ...init.headers },
+    headers: { "Content-Type": "application/json", ...init.headers },
   });
   if (!response.ok) {
     let body: { error?: { code?: string; message?: string; fields?: string[] } } = {};

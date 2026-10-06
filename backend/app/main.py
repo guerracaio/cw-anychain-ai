@@ -114,7 +114,6 @@ def create_app(
     transport: httpx.AsyncBaseTransport | None = None,
     llm: LLMProvider | None = None,
     store: ConfigStore | None = None,
-    admin_token: str | None = None,
 ) -> FastAPI:
     """With an injected config (tests), settings are read-only unless a store is given."""
 
@@ -125,7 +124,6 @@ def create_app(
         active = profiles.active() if profiles else None
         settings = config if config is not None else profiles.load(active)  # type: ignore[union-attr]
         app.state.store = profiles
-        app.state.admin_token = admin_token or os.environ.get("ADMIN_TOKEN") or None
         async with httpx.AsyncClient(transport=transport, follow_redirects=False) as client:
             app.state.http_client = client
 
