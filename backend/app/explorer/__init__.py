@@ -1,0 +1,1 @@
+"""Blockscout integration boundary."""

@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* InfinitePay brand palette (Guia rápido de marca, 2024). Orange tones need brand approval
+   and are not used. Weights: white 40%, black 30%, purple 15%, green 10%. */
+@theme {
+  --color-ink-900: #121212;
+  --color-ink-800: #323232;
+  --color-ink-400: #c7c7c7;
+  --color-ink-200: #eeeeee;
+  --color-brand-600: #6e08f2;
+  --color-brand-200: #a880ff;
+  --color-brand-0: #dcccff;
+  --color-accent-500: #baff1a;
+  --color-accent-300: #d9ff80;
+  --color-accent-100: #f6ffe0;
+  /* Inter for reading; Cera Pro (brand) only for titles and highlights via font-display. */
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+  --font-display: var(--font-cera), Arial, Helvetica, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  background: #ffffff;
+  color: var(--color-ink-900);
+}
+
+/* Do not enable lining-nums: this Cera Pro build drops most digit glyphs with it. */
+body { margin: 0; background: #ffffff; font-family: var(--font-sans); }
+
+/* Base rules stay in the base layer so utilities such as font-mono can override them. */
+@layer base {
+  h1, h2 { font-family: var(--font-display); }
+  button, input { font: inherit; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
+::selection { background: var(--color-brand-0); color: var(--color-ink-900); }
+:focus-visible { outline: 2px solid var(--color-brand-600); outline-offset: 4px; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

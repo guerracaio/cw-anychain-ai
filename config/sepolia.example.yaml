@@ -1,0 +1,43 @@
+network:
+  id: sepolia
+  name: Sepolia
+  chain_id: 11155111
+  native_currency: ETH
+  native_decimals: 18
+explorer:
+  type: blockscout
+  base_url: https://eth-sepolia.blockscout.com
+rpc:
+  url: ${RPC_URL:-}
+repositories: []
+github:
+  token: ${GITHUB_TOKEN:-}
+abi:
+  strategies: [explorer, repository]
+llm:
+  # Supported: gemini, openai. The key comes from <PROVIDER>_API_KEY (e.g. OPENAI_API_KEY).
+  provider: ${LLM_PROVIDER:-}
+  model: ${LLM_MODEL:-}
+  timeout_seconds: 60
+  # Reasoning effort (minimal | low | medium | high) for models that support it; use
+  # LLM_THINKING_LEVEL=none for models without reasoning.
+  thinking_level: ${LLM_THINKING_LEVEL:-low}
+  # Optional, only for the estimated cost in logs/responses (USD per 1M tokens).
+  input_price_per_million: ${LLM_INPUT_PRICE_PER_MILLION:-}
+  output_price_per_million: ${LLM_OUTPUT_PRICE_PER_MILLION:-}
+analysis:
+  max_explorer_pages: 3
+  max_collection_items: 100
+  max_abi_contracts: 10
+  collection_timeout_seconds: 25
+  max_agent_steps: 10
+  max_output_tokens: 8192
+  agent_timeout_seconds: 90
+  max_llm_context_chars: 60000
+  max_tool_result_chars: 8000
+  tool_timeout_seconds: 15
+  max_payload_bytes: 65536
+  max_contract_payload_bytes: 2097152
+  max_repository_excerpt_chars: 12000
+  include_security_notes: true
+

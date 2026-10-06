@@ -1,0 +1,99 @@
+# Fixed evaluation set (Ethereum Mainnet). Snapshots in evals/snapshots/ freeze the
+# deterministic evidence, so models are compared on identical input.
+#
+# expect.mention: each group passes when any term appears in the explanation text
+#   (summary, findings, causes, steps, notes, uncertainties; case- and accent-insensitive).
+# expect.cite: each group passes when a cited evidence id starts with one of its prefixes.
+# grounded (always checked): no discarded items and no unverified identifiers.
+cases:
+  - id: native-transfer
+    category: "1. Transferência nativa simples"
+    tx_hash: "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77"
+    mode: support
+    expect:
+      mention: [["0.002", "0,002"], ["ETH", "ether"]]
+      cite: [["explorer.transaction", "rpc."]]
+      max_tool_calls: 0
+      forbid: ["falhou", "revert"]
+
+  - id: erc20-transfer
+    category: "2. Transferência ERC-20 (USDT)"
+    tx_hash: "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9"
+    expect:
+      mention: [["transfer"], ["49,19", "49.19"], ["USDT", "Tether"]]
+      cite: [["decoder.input"], ["explorer.source", "explorer.abi"]]
+      max_tool_calls: 2
+
+  - id: failed-revert-string
+    category: "3. Falha com revert decodificado (Uniswap, slippage)"
+    tx_hash: "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d"
+    collect: {source: example, example: examples/collection/phase6-failed-slippage.json}
+    expect:
+      mention:
+        - ["slippage", "deslizamento"]
+        - ["decreaseLiquidity", "addLiquidity"]
+        - ["multicall"]
+      cite: [["rpc.replay"], ["explorer.source"]]
+      likely_cause: true
+      forbid: ["executada com sucesso", "foi bem-sucedida"]
+
+  - id: failed-state-race
+    category: "4. Falha que exige raciocínio sobre estado (Across, RelayFilled)"
+    tx_hash: "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770"
+    collect: {source: example, example: examples/collection/phase6-failed-custom-error-race.json}
+    expect:
+      mention:
+        - ["RelayFilled"]
+        - ["mesmo bloco", "outra transacao", "concorr", "corrida", "front", "antes dela"]
+      cite: [["rpc.replay"]]
+      likely_cause: true
+      forbid: ["executada com sucesso", "foi bem-sucedida"]
+
+  - id: repository-logic
+    category: "5. Lógica de negócio do repositório (USDC via proxy)"
+    tx_hash: "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1"
+    mode: auditor
+    expect:
+      mention:
+        - ["proxy"]
+        - ["blacklist", "lista negra", "bloqueio"]
+        - ["pause", "pausa"]
+        - ["446"]
+      cite: [["repository."], ["explorer.contract", "explorer.abi"]]
+
+  - id: missing-abi
+    category: "6. ABI ausente (contrato não verificado)"
+    tx_hash: "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3"
+    expect:
+      mention:
+        - ["nao verificad", "sem abi", "abi nao", "abi indisponivel", "nao decodific", "nao foi possivel decodificar", "abi ausente"]
+        - ["PEGA"]
+      cite: [["explorer.transfers", "decoder.logs", "explorer.logs"]]
+
+  - id: partial-failure
+    category: "7. Falha parcial de fonte externa (sem RPC)"
+    tx_hash: "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9"
+    mode: support
+    collect: {rpc: false}
+    expect:
+      mention: [["USDT", "Tether"], ["49,19", "49.19"], ["RPC"]]
+      cite: [["explorer."]]
+
+  - id: multi-contract
+    category: "8. Interação com vários contratos (Uniswap Universal Router)"
+    tx_hash: "0xc8ce0ff0b630d6df9abdc02554d690757d8d1f529e239451e9dbf64907e7defd"
+    expect:
+      mention: [["AZTEC"], ["WETH"], ["swap", "troca", "trocou"], ["execute"]]
+      cite: [["decoder.logs", "explorer.transfers"], ["decoder.input"]]
+
+  - id: failed-out-of-gas
+    category: "Extra: falta de gas"
+    tx_hash: "0x7ff60ddf87c63854911e9f01f176426018c8cc26c2f1deec57ea7da65bede730"
+    mode: support
+    collect: {source: example, example: examples/collection/phase6-failed-out-of-gas.json}
+    expect:
+      mention: [["gas"], ["limite", "21200", "21.200", "21,200"]]
+      cite: [["explorer.transaction", "rpc.receipt", "rpc.replay"]]
+      likely_cause: true
+      max_tool_calls: 3
+      forbid: ["executada com sucesso"]

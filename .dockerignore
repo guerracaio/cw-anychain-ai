@@ -1,0 +1,14 @@
+# Backend build context (repository root): only backend/ and config/*.yaml are copied.
+.env
+.env.*
+.venv
+.git
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+**/*.egg-info
+config/local
+frontend
+evals
+examples

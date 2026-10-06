@@ -1,0 +1,11 @@
+# Candidate models. Prices: USD per 1M tokens, Gemini API paid tier, checked on 2026-10-02
+# (https://ai.google.dev/gemini-api/docs/pricing). Output prices include thinking tokens.
+# 3.6/3.7/3.8 Flash prices are promotional until 2026-12-31 (then $1.50 / $7.50).
+models:
+  - {provider: gemini, model: gemini-3.8-flash, input_price_per_million: 0.75, output_price_per_million: 3.75, thinking_level: low}
+  - {provider: gemini, model: gemini-3.7-flash, input_price_per_million: 0.75, output_price_per_million: 3.75, thinking_level: low}
+  - {provider: gemini, model: gemini-3.5-flash, input_price_per_million: 1.50, output_price_per_million: 9.00, thinking_level: low}
+  - {provider: gemini, model: gemini-3.5-flash-lite, input_price_per_million: 0.30, output_price_per_million: 2.50, thinking_level: low}
+  - {provider: gemini, model: gemini-3.1-flash-lite, input_price_per_million: 0.25, output_price_per_million: 1.50, thinking_level: low}
+# OpenAI: prices as listed in AGENTS.md (October 2026); confirm at https://openai.com/api/pricing.
+  - {provider: openai, model: gpt-5-mini, input_price_per_million: 0.25, output_price_per_million: 2.00, thinking_level: low}

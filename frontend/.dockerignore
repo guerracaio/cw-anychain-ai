@@ -1,0 +1,7 @@
+node_modules
+.next
+*.tsbuildinfo
+.env*
+!.env.local.example
+Dockerfile
+assets/*.pdf

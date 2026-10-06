@@ -1,0 +1,1157 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+  "status": "success",
+  "summary": "A transação foi executada com sucesso segundo as fontes consultadas. Função chamada, decodificada pela ABI: transfer(address,uint256).",
+  "request_id": "290771b2a9184fec948c126ceb787f7c",
+  "explorer_url": "https://eth.blockscout.com/tx/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+  "transaction": {
+    "sender": "0x1e2733af1a1f6447a46f59ee0693730f277d31e8",
+    "recipient": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "recipient_is_contract": true,
+    "created_contract": null,
+    "block_number": 26101182,
+    "block_hash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+    "value_raw": "0",
+    "value_display": "0",
+    "native_currency": "ETH",
+    "calldata": "0xa9059cbb0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72000000000000000000000000000000000000000000000000000000001a956b80",
+    "selector": "0xa9059cbb",
+    "gas_limit": "87889",
+    "gas_used": "40360",
+    "gas_price": "165684231",
+    "decoded_input": {
+      "function": "transfer",
+      "signature": "transfer(address,uint256)",
+      "selector": "0xa9059cbb",
+      "arguments": [
+        {
+          "name": "to",
+          "type": "address",
+          "value": "0x9d7d8b567ee10bcb4f9db438245e1d0668175d72",
+          "hashed": false,
+          "truncated": false
+        },
+        {
+          "name": "value",
+          "type": "uint256",
+          "value": "446000000",
+          "hashed": false,
+          "truncated": false
+        }
+      ],
+      "abi_source": "explorer",
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "abi_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "evidence_ids": [
+        "decoder.input",
+        "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "explorer.abi.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    },
+    "field_sources": {
+      "sender": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient_is_contract": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_raw": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction",
+        "rpc.receipt"
+      ],
+      "gas_price": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "block_hash": [
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_display": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "selector": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "decoded_input": [
+        "decoder.input",
+        "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "explorer.abi.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction",
+    "rpc.receipt"
+  ],
+  "calls": [
+    {
+      "sender": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "recipient": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "call_type": "delegatecall",
+      "success": true,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    }
+  ],
+  "transfers": [
+    {
+      "sender": "0x1e2733af1a1f6447a46f59ee0693730f277d31e8",
+      "recipient": "0x9d7d8b567ee10bcb4f9db438245e1d0668175d72",
+      "token_address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "token_symbol": "USDC",
+      "token_type": "ERC-20",
+      "total": {
+        "decimals": "6",
+        "value": "446000000"
+      },
+      "evidence_ids": [
+        "explorer.transfers"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "index": 419,
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000001e2733af1a1f6447a46f59ee0693730f277d31e8",
+        "0x0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72"
+      ],
+      "data": "0x000000000000000000000000000000000000000000000000000000001a956b80",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "arguments": [
+          {
+            "name": "from",
+            "type": "address",
+            "value": "0x1e2733af1a1f6447a46f59ee0693730f277d31e8",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "to",
+            "type": "address",
+            "value": "0x9d7d8b567ee10bcb4f9db438245e1d0668175d72",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "value",
+            "type": "uint256",
+            "value": "446000000",
+            "hashed": false,
+            "truncated": false
+          }
+        ],
+        "abi_source": "explorer",
+        "abi_address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "evidence_ids": [
+          "decoder.logs",
+          "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "explorer.abi.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+          "rpc.logs"
+        ]
+      },
+      "evidence_ids": [
+        "rpc.logs"
+      ]
+    }
+  ],
+  "diagnosis": {
+    "confirmed": [],
+    "likely_causes": [],
+    "next_steps": [],
+    "revert": null,
+    "replay": null,
+    "state_reads": []
+  },
+  "contract_context": [
+    {
+      "origin": "explorer",
+      "contract": "FiatTokenV2_2",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV2_2",
+      "kind": "contract",
+      "reason": "contract_header",
+      "path": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/FiatTokenV2_2.sol",
+      "start_line": 30,
+      "end_line": 34,
+      "code": "/**\n * @title FiatToken V2.2\n * @notice ERC20 Token backed by fiat reserves, version 2.2\n */\ncontract FiatTokenV2_2 is FiatTokenV2_1 {",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x43506849d7c04f9138d1a2050bbf3a0c054402dd?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "FiatTokenV1",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV1.transfer",
+      "kind": "function",
+      "reason": "called_function",
+      "path": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/FiatTokenV1.sol",
+      "start_line": 279,
+      "end_line": 295,
+      "code": "    /**\n     * @notice Transfers tokens from the caller.\n     * @param to    Payee's address.\n     * @param value Transfer amount.\n     * @return True if the operation was successful.\n     */\n    function transfer(address to, uint256 value)\n        external\n        override\n        whenNotPaused\n        notBlacklisted(msg.sender)\n        notBlacklisted(to)\n        returns (bool)\n    {\n        _transfer(msg.sender, to, value);\n        return true;\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x43506849d7c04f9138d1a2050bbf3a0c054402dd?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "Pausable",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "Pausable.whenNotPaused",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/Pausable.sol",
+      "start_line": 51,
+      "end_line": 57,
+      "code": "    /**\n     * @dev Modifier to make a function callable only when the contract is not paused.\n     */\n    modifier whenNotPaused() {\n        require(!paused, \"Pausable: paused\");\n        _;\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x43506849d7c04f9138d1a2050bbf3a0c054402dd?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "Blacklistable",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "Blacklistable.notBlacklisted",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/Blacklistable.sol",
+      "start_line": 46,
+      "end_line": 56,
+      "code": "    /**\n     * @dev Throws if argument account is blacklisted.\n     * @param _account The address to check.\n     */\n    modifier notBlacklisted(address _account) {\n        require(\n            !_isBlacklisted(_account),\n            \"Blacklistable: account is blacklisted\"\n        );\n        _;\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x43506849d7c04f9138d1a2050bbf3a0c054402dd?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "FiatTokenV1",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV1._transfer",
+      "kind": "function",
+      "reason": "related_function",
+      "path": "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/FiatTokenV1.sol",
+      "start_line": 297,
+      "end_line": 318,
+      "code": "    /**\n     * @dev Internal function to process transfers.\n     * @param from  Payer's address.\n     * @param to    Payee's address.\n     * @param value Transfer amount.\n     */\n    function _transfer(\n        address from,\n        address to,\n        uint256 value\n    ) internal override {\n        require(from != address(0), \"ERC20: transfer from the zero address\");\n        require(to != address(0), \"ERC20: transfer to the zero address\");\n        require(\n            value <= _balanceOf(from),\n            \"ERC20: transfer amount exceeds balance\"\n        );\n\n        _setBalance(from, _balanceOf(from).sub(value));\n        _setBalance(to, _balanceOf(to).add(value));\n        emit Transfer(from, to, value);\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x43506849d7c04f9138d1a2050bbf3a0c054402dd?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+      ]
+    },
+    {
+      "origin": "repository",
+      "contract": "FiatTokenV2_2",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV2_2",
+      "kind": "contract",
+      "reason": "contract_header",
+      "path": "contracts/v2/FiatTokenV2_2.sol",
+      "start_line": 30,
+      "end_line": 34,
+      "code": "/**\n * @title FiatToken V2.2\n * @notice ERC20 Token backed by fiat reserves, version 2.2\n */\ncontract FiatTokenV2_2 is FiatTokenV2_1 {",
+      "truncated": false,
+      "repository": "https://github.com/circlefin/stablecoin-evm",
+      "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+      "url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v2/FiatTokenV2_2.sol#L30-L34",
+      "evidence_ids": [
+        "repository.circlefin/stablecoin-evm:contracts/v2/FiatTokenV2_2.sol"
+      ]
+    },
+    {
+      "origin": "repository",
+      "contract": "FiatTokenV1",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV1.transfer",
+      "kind": "function",
+      "reason": "called_function",
+      "path": "contracts/v1/FiatTokenV1.sol",
+      "start_line": 281,
+      "end_line": 298,
+      "code": "    /**\n     * @notice Transfers tokens from the caller.\n     * @param to    Payee's address.\n     * @param value Transfer amount.\n     * @return True if the operation was successful.\n     */\n    function transfer(address to, uint256 value)\n        external\n        virtual\n        override\n        whenNotPaused\n        notBlacklisted(msg.sender)\n        notBlacklisted(to)\n        returns (bool)\n    {\n        _transfer(msg.sender, to, value);\n        return true;\n    }",
+      "truncated": false,
+      "repository": "https://github.com/circlefin/stablecoin-evm",
+      "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+      "url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/FiatTokenV1.sol#L281-L298",
+      "evidence_ids": [
+        "repository.circlefin/stablecoin-evm:contracts/v1/FiatTokenV1.sol"
+      ]
+    },
+    {
+      "origin": "repository",
+      "contract": "Pausable",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "Pausable.whenNotPaused",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "contracts/v1/Pausable.sol",
+      "start_line": 51,
+      "end_line": 57,
+      "code": "    /**\n     * @dev Modifier to make a function callable only when the contract is not paused.\n     */\n    modifier whenNotPaused() {\n        require(!paused, \"Pausable: paused\");\n        _;\n    }",
+      "truncated": false,
+      "repository": "https://github.com/circlefin/stablecoin-evm",
+      "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+      "url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/Pausable.sol#L51-L57",
+      "evidence_ids": [
+        "repository.circlefin/stablecoin-evm:contracts/v1/Pausable.sol"
+      ]
+    },
+    {
+      "origin": "repository",
+      "contract": "Blacklistable",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "Blacklistable.notBlacklisted",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "contracts/v1/Blacklistable.sol",
+      "start_line": 46,
+      "end_line": 56,
+      "code": "    /**\n     * @dev Throws if argument account is blacklisted.\n     * @param _account The address to check.\n     */\n    modifier notBlacklisted(address _account) {\n        require(\n            !_isBlacklisted(_account),\n            \"Blacklistable: account is blacklisted\"\n        );\n        _;\n    }",
+      "truncated": false,
+      "repository": "https://github.com/circlefin/stablecoin-evm",
+      "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+      "url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/Blacklistable.sol#L46-L56",
+      "evidence_ids": [
+        "repository.circlefin/stablecoin-evm:contracts/v1/Blacklistable.sol"
+      ]
+    },
+    {
+      "origin": "repository",
+      "contract": "FiatTokenV1",
+      "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "symbol": "FiatTokenV1._transfer",
+      "kind": "function",
+      "reason": "related_function",
+      "path": "contracts/v1/FiatTokenV1.sol",
+      "start_line": 300,
+      "end_line": 321,
+      "code": "    /**\n     * @dev Internal function to process transfers.\n     * @param from  Payer's address.\n     * @param to    Payee's address.\n     * @param value Transfer amount.\n     */\n    function _transfer(\n        address from,\n        address to,\n        uint256 value\n    ) internal virtual override {\n        require(from != address(0), \"ERC20: transfer from the zero address\");\n        require(to != address(0), \"ERC20: transfer to the zero address\");\n        require(\n            value <= _balanceOf(from),\n            \"ERC20: transfer amount exceeds balance\"\n        );\n\n        _setBalance(from, _balanceOf(from).sub(value));\n        _setBalance(to, _balanceOf(to).add(value));\n        emit Transfer(from, to, value);\n    }",
+      "truncated": false,
+      "repository": "https://github.com/circlefin/stablecoin-evm",
+      "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+      "url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/FiatTokenV1.sol#L300-L321",
+      "evidence_ids": [
+        "repository.circlefin/stablecoin-evm:contracts/v1/FiatTokenV1.sol"
+      ]
+    }
+  ],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "rpc.chain",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: rede verificada antes das leituras",
+      "payload": {
+        "method": "eth_chainId",
+        "result": 1
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0xa9059cbb0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72000000000000000000000000000000000000000000000000000000001a956b80",
+        "result": "success",
+        "hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+        "revert_reason": null,
+        "created_contract": null,
+        "value": "0",
+        "from": {
+          "hash": "0x1e2733af1a1F6447A46F59ee0693730F277d31E8"
+        },
+        "gas_used": "40360",
+        "status": "ok",
+        "to": {
+          "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+        },
+        "gas_limit": "87889",
+        "gas_price": "165684231",
+        "block_number": 26101182
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.transaction",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionByHash (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1"
+        ],
+        "result": {
+          "gas": "0x15751",
+          "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "value": "0x0",
+          "input": "0xa9059cbb0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72000000000000000000000000000000000000000000000000000000001a956b80",
+          "hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+          "blockHash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+          "blockNumber": "0x18e45be",
+          "transactionIndex": "0x7d",
+          "from": "0x1e2733af1a1f6447a46f59ee0693730f277d31e8",
+          "gasPrice": "0x9e02407"
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.receipt",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionReceipt (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1"
+        ],
+        "result": {
+          "status": "0x1",
+          "transactionHash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+          "transactionIndex": "0x7d",
+          "blockHash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+          "blockNumber": "0x18e45be",
+          "gasUsed": "0x9da8",
+          "effectiveGasPrice": "0x9e02407",
+          "from": "0x1e2733af1a1f6447a46f59ee0693730f277d31e8",
+          "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "contractAddress": null
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+            "block_number": 26101182,
+            "block_timestamp": "2026-10-02T00:53:59.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000001a956b80",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x1e2733af1a1F6447A46F59ee0693730F277d31E8"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0x9d7d8B567eE10bcb4F9db438245e1d0668175d72"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "446000000"
+                }
+              ]
+            },
+            "index": 419,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000001e2733af1a1f6447a46f59ee0693730f277d31e8",
+              "0x0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72",
+              null
+            ],
+            "transaction_hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [
+          {
+            "block_hash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+            "block_number": 26101182,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1e2733af1a1F6447A46F59ee0693730F277d31E8",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 419,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x9d7d8B567eE10bcb4F9db438245e1d0668175d72",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "circulating_market_cap": "74329069123.851",
+              "circulating_supply": null,
+              "decimals": "6",
+              "exchange_rate": "0.999974",
+              "holders_count": "9443955",
+              "icon_url": "https://raw.githubusercontent.com/ulyanas/frontend-configs/add-usdc-eurc-latest-token-icons/configs/token-icons/USDC_latest.svg",
+              "name": "USDC",
+              "reputation": "ok",
+              "symbol": "USDC",
+              "total_supply": "48952054676293176",
+              "type": "ERC-20",
+              "volume_24h": "19212534545.828224"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "6",
+              "value": "446000000"
+            },
+            "transaction_hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+            "type": "token_transfer"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [
+          {
+            "block_number": 26101182,
+            "created_contract": null,
+            "error": null,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "58114",
+            "index": 1,
+            "success": true,
+            "timestamp": "2026-10-02T00:53:59.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "FiatTokenV2_2",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+            "transaction_index": 125,
+            "type": "delegatecall",
+            "value": "0"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.logs",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: logs do recibo",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1"
+        ],
+        "blockHash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+        "logs": [
+          {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000001e2733af1a1f6447a46f59ee0693730f277d31e8",
+              "0x0000000000000000000000009d7d8b567ee10bcb4f9db438245e1d0668175d72"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000001a956b80",
+            "blockHash": "0x756c090d73e854bc360b992a68c378d1dd67192982bfb61bbb2bfd3a136140c0",
+            "blockNumber": "0x18e45be",
+            "blockTimestamp": "0x6abf00a7",
+            "transactionHash": "0x10cf88efd1ecf75d7599ab932d7dde19be9bb723f82bd5b2dae55fb2373255b1",
+            "transactionIndex": "0x7d",
+            "logIndex": "0x1a3",
+            "removed": false
+          }
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "description": "Blockscout: metadados do contrato e implementação de proxy",
+      "payload": {
+        "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "name": "FiatTokenProxy",
+        "is_verified": true,
+        "proxy_type": "eip1967_oz",
+        "implementations": [
+          "0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+        ]
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.abi.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "description": "Blockscout: ABI verificada do contrato",
+      "payload": {
+        "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "contract": "FiatTokenV2_2",
+        "role": "implementation",
+        "abi_source": "explorer",
+        "functions": 55,
+        "events": 17
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "decoder.input",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística da calldata pela ABI",
+      "payload": {
+        "selector": "0xa9059cbb",
+        "signature": "transfer(address,uint256)",
+        "abi_evidence_ids": [
+          "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "explorer.abi.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+        ],
+        "calldata_evidence_ids": [
+          "explorer.transaction",
+          "rpc.transaction"
+        ]
+      },
+      "confidence": "decoded"
+    },
+    {
+      "id": "decoder.logs",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística dos logs pela ABI do emissor",
+      "payload": {
+        "decoded": [
+          {
+            "index": 419,
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "signature": "Transfer(address,address,uint256)"
+          }
+        ]
+      },
+      "confidence": "decoded"
+    },
+    {
+      "id": "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "description": "Blockscout: código-fonte verificado de FiatTokenV2_2",
+      "payload": {
+        "address": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+        "contract": "FiatTokenV2_2",
+        "files": [
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/FiatTokenV2_2.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/FiatTokenV2_1.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/FiatTokenV2.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/EIP2612.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/EIP3009.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1.1/FiatTokenV1_1.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/EIP712Domain.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v2/AbstractFiatTokenV2.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1.1/Rescuable.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/FiatTokenV1.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/AbstractFiatTokenV1.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/Ownable.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/Blacklistable.sol",
+          "/Users/aloysius.chan/Repositories/circlefin/stablecoin-evm-private-eurc-mainnet-eth/contracts/v1/Pausable.sol"
+        ]
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "repository.circlefin/stablecoin-evm:contracts/v2/FiatTokenV2_2.sol",
+      "source_type": "repository",
+      "source_url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v2/FiatTokenV2_2.sol",
+      "description": "Repositório circlefin/stablecoin-evm: contracts/v2/FiatTokenV2_2.sol",
+      "payload": {
+        "repository": "https://github.com/circlefin/stablecoin-evm",
+        "branch": "master",
+        "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+        "path": "contracts/v2/FiatTokenV2_2.sol"
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "repository.circlefin/stablecoin-evm:contracts/v1/FiatTokenV1.sol",
+      "source_type": "repository",
+      "source_url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/FiatTokenV1.sol",
+      "description": "Repositório circlefin/stablecoin-evm: contracts/v1/FiatTokenV1.sol",
+      "payload": {
+        "repository": "https://github.com/circlefin/stablecoin-evm",
+        "branch": "master",
+        "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+        "path": "contracts/v1/FiatTokenV1.sol"
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "repository.circlefin/stablecoin-evm:contracts/v1/Pausable.sol",
+      "source_type": "repository",
+      "source_url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/Pausable.sol",
+      "description": "Repositório circlefin/stablecoin-evm: contracts/v1/Pausable.sol",
+      "payload": {
+        "repository": "https://github.com/circlefin/stablecoin-evm",
+        "branch": "master",
+        "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+        "path": "contracts/v1/Pausable.sol"
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "repository.circlefin/stablecoin-evm:contracts/v1/Blacklistable.sol",
+      "source_type": "repository",
+      "source_url": "https://github.com/circlefin/stablecoin-evm/blob/fc85788bc7c23cefe3df1a757133048bfddadeaa/contracts/v1/Blacklistable.sol",
+      "description": "Repositório circlefin/stablecoin-evm: contracts/v1/Blacklistable.sol",
+      "payload": {
+        "repository": "https://github.com/circlefin/stablecoin-evm",
+        "branch": "master",
+        "commit": "fc85788bc7c23cefe3df1a757133048bfddadeaa",
+        "path": "contracts/v1/Blacklistable.sol"
+      },
+      "confidence": "observed"
+    }
+  ],
+  "uncertainties": [
+    "O contrato 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 é um proxy. A implementação 0x43506849d7c04f9138d1a2050bbf3a0c054402dd é a atual informada pelo explorer e pode diferir da vigente no bloco da transação; confirme o slot de implementação por RPC histórico se necessário.",
+    "Trechos de circlefin/stablecoin-evm vêm do commit fc85788bc7c2 da branch master, associados por nome a 0x43506849d7c04f9138d1a2050bbf3a0c054402dd. O repositório pode diferir do código implantado; o código verificado do explorer prevalece quando divergirem."
+  ],
+  "mode": "auditor",
+  "explanation": {
+    "summary": "Transação bem-sucedida que chamou `transfer(address,uint256)` no contrato proxy `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48` (USDC). A chamada delegou para a implementação `0x43506849d7c04f9138d1a2050bbf3a0c054402dd` e resultou no evento `Transfer` de 446000000 (USDC, 6 decimais).",
+    "findings": [
+      {
+        "kind": "observed",
+        "statement": "A transação foi enviada por `0x1e2733af1a1f6447a46f59ee0693730f277d31e8` para o contrato `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48` com calldata `0xa9059cbb...` (selector `0xa9059cbb`).",
+        "evidence_ids": [
+          "explorer.transaction",
+          "rpc.transaction",
+          "decoder.input"
+        ]
+      },
+      {
+        "kind": "decoded",
+        "statement": "A função chamada foi `transfer(address,uint256)` com argumentos: `to = 0x9d7d8b567ee10bcb4f9db438245e1d0668175d72`, `value = 446000000`.",
+        "evidence_ids": [
+          "decoder.input",
+          "explorer.transaction"
+        ]
+      },
+      {
+        "kind": "observed",
+        "statement": "O recibo e os logs mostram um `Transfer` emitido pelo mesmo endereço do token, indicando sucesso da transferência on-chain.",
+        "evidence_ids": [
+          "rpc.receipt",
+          "rpc.logs",
+          "explorer.logs",
+          "explorer.transfers"
+        ]
+      },
+      {
+        "kind": "observed",
+        "statement": "Há uma chamada interna do token proxy para `0x43506849d7c04f9138d1a2050bbf3a0c054402dd` via `delegatecall` (sucesso).",
+        "evidence_ids": [
+          "explorer.calls",
+          "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        ]
+      },
+      {
+        "kind": "source",
+        "statement": "O código verificado da implementação (`FiatTokenV1.transfer`) aplica os modificadores `whenNotPaused` e `notBlacklisted(msg.sender)` e `notBlacklisted(to)` antes de executar `_transfer`.",
+        "evidence_ids": [
+          "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+          "repository.circlefin/stablecoin-evm:contracts/v1/FiatTokenV1.sol"
+        ]
+      },
+      {
+        "kind": "source",
+        "statement": "O modificador `whenNotPaused` requer que a variável `paused` seja falsa; `notBlacklisted` chama `_isBlacklisted` e reverte se verdadeiro.",
+        "evidence_ids": [
+          "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+          "repository.circlefin/stablecoin-evm:contracts/v1/Pausable.sol",
+          "repository.circlefin/stablecoin-evm:contracts/v1/Blacklistable.sol"
+        ]
+      },
+      {
+        "kind": "inference",
+        "statement": "Como a transação foi bem-sucedida e o evento `Transfer` foi emitido, as checagens `whenNotPaused` e `notBlacklisted` (para `msg.sender` e `to`) passaram, e o saldo de `msg.sender` foi suficiente para `value = 446000000`.",
+        "evidence_ids": [
+          "rpc.receipt",
+          "rpc.logs",
+          "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+          "decoder.input"
+        ]
+      },
+      {
+        "kind": "observed",
+        "statement": "O pacote de evidências nota que `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48` é um proxy e que a implementação apontada é `0x43506849d7c04f9138d1a2050bbf3a0c054402dd`; há uma advertência de que o slot de implementação deve ser verificado por RPC histórico para confirmar a implementação no bloco.",
+        "evidence_ids": [
+          "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        ]
+      }
+    ],
+    "likely_causes": [],
+    "next_steps": [
+      "Verificar o slot de implementação do proxy `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48` no bloco `26101182` via RPC histórico para confirmar que a implementação era `0x43506849d7c04f9138d1a2050bbf3a0c054402dd` (e.g. `eth_getStorageAt`).",
+      "Consultar, por leitura RPC histórica, os estados relevantes: o booleano `paused`, o mapeamento/estrutura que armazena blacklist e os endereços com privilégios administrativos (pausar, adicionar blacklist, atualizar implementação).",
+      "Auditar quem tem os papéis de administração do proxy e da lógica (`upgrade`, `pause`, `blacklist`) e revisar controles fora da cadeia (processos de upgrade, multisig, timelock)."
+    ],
+    "security_notes": [
+      {
+        "description": "Padrão proxy com `delegatecall` transfere execução e armazenamento para a implementação; privilégios administrativos na implementação ou no controlador do proxy podem afetar todos os saldos e lógica do token.",
+        "evidence_ids": [
+          "explorer.calls",
+          "explorer.contract.0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+        ]
+      },
+      {
+        "description": "A presença de `whenNotPaused` e `notBlacklisted` indica mecanismos de controle centralizados (pausar e blacklist). Revise quem pode acionar `pause`/`unpause` e alterar a lista negra; essas capacidades são de alto impacto operacional e de custódia.",
+        "evidence_ids": [
+          "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+          "repository.circlefin/stablecoin-evm:contracts/v1/Blacklistable.sol",
+          "repository.circlefin/stablecoin-evm:contracts/v1/Pausable.sol"
+        ]
+      },
+      {
+        "description": "Não há evidência aqui sobre limites administrativos (multisig, timelock). A ausência dessa informação no pacote justifica revisão adicional: acesso administrativo sem salvaguardas on-chain aumenta risco de abuso.",
+        "evidence_ids": [
+          "explorer.source.0x43506849d7c04f9138d1a2050bbf3a0c054402dd"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "O pacote não contém leituras históricas do slot de implementação do proxy no bloco 26101182; portanto não é possível afirmar com certeza que a implementação usada naquele bloco era `0x43506849d7c04f9138d1a2050bbf3a0c054402dd` sem uma leitura RPC histórica.",
+      "Não há leituras on-chain no pacote que confirmem o estado de `paused`, o mapeamento de blacklist, nem os endereços com privilégios administrativos naquele bloco; essas leituras são necessárias para maior confiança operacional."
+    ],
+    "discarded_items": 0,
+    "unverified_identifiers": [],
+    "usage": {
+      "provider": "openai",
+      "model": "gpt-5-mini",
+      "steps": 1,
+      "tool_calls": [],
+      "input_tokens": 7055,
+      "output_tokens": 1829,
+      "thinking_tokens": 256,
+      "estimated_cost_usd": null,
+      "duration_ms": 20014
+    }
+  },
+  "explanation_issue": null
+}

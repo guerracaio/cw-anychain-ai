@@ -1,0 +1,2586 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+  "status": "failed",
+  "summary": "A transação falhou. O valor informado não deve ser tratado como transferência concluída. Função chamada, decodificada pela ABI: multicall(bytes[]). Chamadas agrupadas, na ordem: mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256)), refundETH().",
+  "request_id": "8d5bd7adc9eb4a01a7bc5bfbe1c6ac1b",
+  "explorer_url": "https://eth.blockscout.com/tx/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+  "transaction": {
+    "sender": "0x143299ce2b02ee230bc66a70799c1088c4ebfb08",
+    "recipient": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+    "recipient_is_contract": true,
+    "created_contract": null,
+    "block_number": 26106986,
+    "block_hash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+    "value_raw": "99999731491510043",
+    "value_display": "0.099999731491510043",
+    "native_currency": "ETH",
+    "calldata": "0xac9650d800000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000016488316456000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000064000000000000000000000000000000000000000000000000000000000002fae6000000000000000000000000000000000000000000000000000000000003033a000000000000000000000000000000000000000000000000000000000002a58200000000000000000000000000000000000000000000000001634539d92f971b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015a7852d6cc2e5b000000000000000000000000143299ce2b02ee230bc66a70799c1088c4ebfb08000000000000000000000000000000000000000000000000000000006ac0163f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000412210e8a00000000000000000000000000000000000000000000000000000000",
+    "selector": "0xac9650d8",
+    "gas_limit": "590574",
+    "gas_used": "341720",
+    "gas_price": "146259282",
+    "decoded_input": {
+      "function": "multicall",
+      "signature": "multicall(bytes[])",
+      "selector": "0xac9650d8",
+      "arguments": [
+        {
+          "name": "data",
+          "type": "bytes[]",
+          "value": [
+            "0x88316456000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000064000000000000000000000000000000000000000000000000000000000002fae6000000000000000000000000000000000000000000000000000000000003033a000000000000000000000000000000000000000000000000000000000002a58200000000000000000000000000000000000000000000000001634539d92f971b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015a7852d6cc2e5b000000000000000000000000143299ce2b02ee230bc66a70799c1088c4ebfb08000000000000000000000000000000000000000000000000000000006ac0163f",
+            "0x12210e8a"
+          ],
+          "hashed": false,
+          "truncated": false
+        }
+      ],
+      "abi_source": "explorer",
+      "contract": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "abi_address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "evidence_ids": [
+        "decoder.input",
+        "explorer.abi.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "nested_calls": [
+        {
+          "argument": "data",
+          "index": 0,
+          "selector": "0x88316456",
+          "function": "mint",
+          "signature": "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))",
+          "arguments": [
+            {
+              "name": "params",
+              "type": "(address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256)",
+              "value": {
+                "token0": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "token1": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                "fee": "100",
+                "tickLower": "195302",
+                "tickUpper": "197434",
+                "amount0Desired": "173442",
+                "amount1Desired": "99999731491510043",
+                "amount0Min": "0",
+                "amount1Min": "97522639128243803",
+                "recipient": "0x143299ce2b02ee230bc66a70799c1088c4ebfb08",
+                "deadline": "1790973503"
+              },
+              "hashed": false,
+              "truncated": false
+            }
+          ],
+          "reason": null
+        },
+        {
+          "argument": "data",
+          "index": 1,
+          "selector": "0x12210e8a",
+          "function": "refundETH",
+          "signature": "refundETH()",
+          "arguments": [],
+          "reason": null
+        }
+      ]
+    },
+    "field_sources": {
+      "sender": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient_is_contract": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_raw": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction",
+        "rpc.receipt"
+      ],
+      "gas_price": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "block_hash": [
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_display": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "selector": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "decoded_input": [
+        "decoder.input",
+        "explorer.abi.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction",
+    "rpc.receipt"
+  ],
+  "calls": [
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "call_type": "delegatecall",
+      "success": false,
+      "value_raw": "99999731491510043",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "call_type": "staticcall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "call_type": "call",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "recipient": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "call_type": "staticcall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "recipient": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "call_type": "delegatecall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "recipient": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "call_type": "staticcall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "recipient": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "call_type": "call",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "call_type": "call",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "recipient": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "call_type": "delegatecall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "call_type": "call",
+      "success": false,
+      "value_raw": "35059635677957499",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "recipient": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "call_type": "call",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "recipient": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "call_type": "staticcall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "recipient": "0x43506849d7c04f9138d1a2050bbf3a0c054402dd",
+      "call_type": "delegatecall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    },
+    {
+      "sender": "0x1445f32d1a74872ba41f3d8cf4022e9996120b31",
+      "recipient": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "call_type": "staticcall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    }
+  ],
+  "transfers": [],
+  "events": [],
+  "diagnosis": {
+    "confirmed": [
+      {
+        "description": "A transação falhou segundo as fontes consultadas.",
+        "evidence_ids": [
+          "explorer.transaction",
+          "rpc.receipt"
+        ]
+      },
+      {
+        "description": "Motivo da falha (explorer): require/revert com mensagem: Error(string) — “Price slippage check”.",
+        "evidence_ids": [
+          "explorer.transaction"
+        ]
+      }
+    ],
+    "likely_causes": [],
+    "next_steps": [
+      "Localize a mensagem do require no código do contrato e verifique a condição com os parâmetros da chamada.",
+      "Configure um RPC com estado histórico (archive) para repetir a chamada e ler o estado no bloco anterior.",
+      "Corrija a causa antes de reenviar: a mesma chamada tende a falhar de novo."
+    ],
+    "revert": {
+      "source": "explorer",
+      "kind": "error_string",
+      "signature": "Error(string)",
+      "name": "Error",
+      "message": "Price slippage check",
+      "arguments": [],
+      "raw": null,
+      "abi_address": null,
+      "ambiguous": false,
+      "evidence_ids": [
+        "explorer.transaction"
+      ]
+    },
+    "replay": "unavailable",
+    "state_reads": []
+  },
+  "contract_context": [
+    {
+      "origin": "explorer",
+      "contract": "NonfungiblePositionManager",
+      "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "symbol": "NonfungiblePositionManager",
+      "kind": "contract",
+      "reason": "contract_header",
+      "path": "contracts/NonfungiblePositionManager.sol",
+      "start_line": 21,
+      "end_line": 32,
+      "code": "/// @title NFT positions\n/// @notice Wraps Pancake V3 positions in the ERC721 non-fungible token interface\ncontract NonfungiblePositionManager is\n    INonfungiblePositionManager,\n    Multicall,\n    ERC721Permit,\n    PeripheryImmutableState,\n    PoolInitializer,\n    LiquidityManagement,\n    PeripheryValidation,\n    SelfPermit\n{",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "Multicall",
+      "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "symbol": "Multicall.multicall",
+      "kind": "function",
+      "reason": "called_function",
+      "path": "contracts/base/Multicall.sol",
+      "start_line": 10,
+      "end_line": 27,
+      "code": "    /// @inheritdoc IMulticall\n    function multicall(bytes[] calldata data) public payable override returns (bytes[] memory results) {\n        results = new bytes[](data.length);\n        for (uint256 i = 0; i < data.length; i++) {\n            (bool success, bytes memory result) = address(this).delegatecall(data[i]);\n\n            if (!success) {\n                // Next 5 lines from https://ethereum.stackexchange.com/a/83577\n                if (result.length < 68) revert();\n                assembly {\n                    result := add(result, 0x04)\n                }\n                revert(abi.decode(result, (string)));\n            }\n\n            results[i] = result;\n        }\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "NonfungiblePositionManager",
+      "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "symbol": "NonfungiblePositionManager.decreaseLiquidity",
+      "kind": "function",
+      "reason": "revert_site",
+      "path": "contracts/NonfungiblePositionManager.sol",
+      "start_line": 257,
+      "end_line": 307,
+      "code": "    /// @inheritdoc INonfungiblePositionManager\n    function decreaseLiquidity(DecreaseLiquidityParams calldata params)\n        external\n        payable\n        override\n        isAuthorizedForToken(params.tokenId)\n        checkDeadline(params.deadline)\n        returns (uint256 amount0, uint256 amount1)\n    {\n        require(params.liquidity > 0);\n        Position storage position = _positions[params.tokenId];\n\n        uint128 positionLiquidity = position.liquidity;\n        require(positionLiquidity >= params.liquidity);\n\n        PoolAddress.PoolKey memory poolKey = _poolIdToPoolKey[position.poolId];\n        IPancakeV3Pool pool = IPancakeV3Pool(PoolAddress.computeAddress(deployer, poolKey));\n        (amount0, amount1) = pool.burn(position.tickLower, position.tickUpper, params.liquidity);\n\n        require(amount0 >= params.amount0Min && amount1 >= params.amount1Min, 'Price slippage check');\n\n        bytes32 positionKey = PositionKey.compute(address(this), position.tickLower, position.tickUpper);\n        // this is now updated to the current transaction\n        (, uint256 feeGrowthInside0LastX128, uint256 feeGrowthInside1LastX128, , ) = pool.positions(positionKey);\n\n        position.tokensOwed0 +=\n            uint128(amount0) +\n            uint128(\n                FullMath.mulDiv(\n                    feeGrowthInside0LastX128 - position.feeGrowthInside0LastX128,\n                    positionLiquidity,\n                    FixedPoint128.Q128\n                )\n            );\n        position.tokensOwed1 +=\n            uint128(amount1) +\n            uint128(\n                FullMath.mulDiv(\n                    feeGrowthInside1LastX128 - position.feeGrowthInside1LastX128,\n                    positionLiquidity,\n                    FixedPoint128.Q128\n                )\n            );\n\n        position.feeGrowthInside0LastX128 = feeGrowthInside0LastX128;\n        position.feeGrowthInside1LastX128 = feeGrowthInside1LastX128;\n        // subtraction is safe because we checked positionLiquidity is gte params.liquidity\n        position.liquidity = positionLiquidity - params.liquidity;\n\n        emit DecreaseLiquidity(params.tokenId, params.liquidity, amount0, amount1);\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "LiquidityManagement",
+      "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "symbol": "LiquidityManagement.addLiquidity",
+      "kind": "function",
+      "reason": "revert_site",
+      "path": "contracts/base/LiquidityManagement.sol",
+      "start_line": 50,
+      "end_line": 89,
+      "code": "    /// @notice Add liquidity to an initialized pool\n    function addLiquidity(AddLiquidityParams memory params)\n        internal\n        returns (\n            uint128 liquidity,\n            uint256 amount0,\n            uint256 amount1,\n            IPancakeV3Pool pool\n        )\n    {\n        PoolAddress.PoolKey memory poolKey =\n            PoolAddress.PoolKey({token0: params.token0, token1: params.token1, fee: params.fee});\n\n        pool = IPancakeV3Pool(PoolAddress.computeAddress(deployer, poolKey));\n\n        // compute the liquidity amount\n        {\n            (uint160 sqrtPriceX96, , , , , , ) = pool.slot0();\n            uint160 sqrtRatioAX96 = TickMath.getSqrtRatioAtTick(params.tickLower);\n            uint160 sqrtRatioBX96 = TickMath.getSqrtRatioAtTick(params.tickUpper);\n\n            liquidity = LiquidityAmounts.getLiquidityForAmounts(\n                sqrtPriceX96,\n                sqrtRatioAX96,\n                sqrtRatioBX96,\n                params.amount0Desired,\n                params.amount1Desired\n            );\n        }\n\n        (amount0, amount1) = pool.mint(\n            params.recipient,\n            params.tickLower,\n            params.tickUpper,\n            liquidity,\n            abi.encode(MintCallbackData({poolKey: poolKey, payer: msg.sender}))\n        );\n\n        require(amount0 >= params.amount0Min && amount1 >= params.amount1Min, 'Price slippage check');\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+      ]
+    }
+  ],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "rpc.chain",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: rede verificada antes das leituras",
+      "payload": {
+        "method": "eth_chainId",
+        "result": 1
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0xac9650d800000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000016488316456000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000064000000000000000000000000000000000000000000000000000000000002fae6000000000000000000000000000000000000000000000000000000000003033a000000000000000000000000000000000000000000000000000000000002a58200000000000000000000000000000000000000000000000001634539d92f971b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015a7852d6cc2e5b000000000000000000000000143299ce2b02ee230bc66a70799c1088c4ebfb08000000000000000000000000000000000000000000000000000000006ac0163f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000412210e8a00000000000000000000000000000000000000000000000000000000",
+        "result": "Reverted",
+        "hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+        "revert_reason": {
+          "method_call": "Error(string reason)",
+          "method_id": "08c379a0",
+          "parameters": [
+            {
+              "name": "reason",
+              "type": "string",
+              "value": "Price slippage check"
+            }
+          ]
+        },
+        "created_contract": null,
+        "value": "99999731491510043",
+        "from": {
+          "hash": "0x143299cE2B02ee230bC66a70799C1088C4eBfb08"
+        },
+        "gas_used": "341720",
+        "status": "error",
+        "to": {
+          "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364"
+        },
+        "gas_limit": "590574",
+        "gas_price": "146259282",
+        "block_number": 26106986
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.transaction",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionByHash (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d"
+        ],
+        "result": {
+          "gas": "0x902ee",
+          "to": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+          "value": "0x1634539d92f971b",
+          "input": "0xac9650d800000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001e0000000000000000000000000000000000000000000000000000000000000016488316456000000000000000000000000a0b86991c6218b36c1d19d4a2e9eb0ce3606eb48000000000000000000000000c02aaa39b223fe8d0a0e5c4f27ead9083c756cc20000000000000000000000000000000000000000000000000000000000000064000000000000000000000000000000000000000000000000000000000002fae6000000000000000000000000000000000000000000000000000000000003033a000000000000000000000000000000000000000000000000000000000002a58200000000000000000000000000000000000000000000000001634539d92f971b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000015a7852d6cc2e5b000000000000000000000000143299ce2b02ee230bc66a70799c1088c4ebfb08000000000000000000000000000000000000000000000000000000006ac0163f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000412210e8a00000000000000000000000000000000000000000000000000000000",
+          "hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+          "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+          "blockNumber": "0x18e5c6a",
+          "transactionIndex": "0x12e",
+          "from": "0x143299ce2b02ee230bc66a70799c1088c4ebfb08",
+          "gasPrice": "0x8b7bd52"
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.receipt",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionReceipt (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d"
+        ],
+        "result": {
+          "status": "0x0",
+          "transactionHash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+          "transactionIndex": "0x12e",
+          "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+          "blockNumber": "0x18e5c6a",
+          "gasUsed": "0x536d8",
+          "effectiveGasPrice": "0x8b7bd52",
+          "from": "0x143299ce2b02ee230bc66a70799c1088c4ebfb08",
+          "to": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+          "contractAddress": null
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "555766",
+            "index": 1,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "delegatecall",
+            "value": "99999731491510043"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "542087",
+            "index": 2,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "staticcall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "531921",
+            "index": 3,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "call",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "315883",
+            "index": 4,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "staticcall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "303819",
+            "index": 5,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "FiatTokenV2_2",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "delegatecall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "302849",
+            "index": 6,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "staticcall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "299575",
+            "index": 7,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "call",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "292052",
+            "index": 8,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "call",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "286750",
+            "index": 9,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "FiatTokenV2_2",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "delegatecall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "262149",
+            "index": 10,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "call",
+            "value": "35059635677957499"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x46A15B0b27311cedF172AB29E4f4766fbE7F4364",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://pancakeswap.finance/"
+                    },
+                    "name": "PancakeSwap:Nonfungible Position Manager V3",
+                    "ordinal": 10,
+                    "slug": "pancakeswapnonfungible-position-manager-v3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEX",
+                    "ordinal": 0,
+                    "slug": "dex",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "appID": "pancake-swap"
+                    },
+                    "name": "PancakeSwap V3",
+                    "ordinal": 0,
+                    "slug": "pancakeswap-v3",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "NonfungiblePositionManager",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "238107",
+            "index": 11,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "call",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "236045",
+            "index": 12,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "staticcall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+              "implementations": [
+                {
+                  "address_hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+                  "name": "FiatTokenV2_2"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Circle",
+                      "tagIcon": "https://assets.coingecko.com/coins/images/6319/small/usdc.png?1696506694",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://scout-app.kleros.io/single-tags/0x924f91c6a015abb7e7a5f8c7c0989761b4df998abdbd6541365eb3c82132a390",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/Qmc3TH5cPhyh7418kSD83SSBzng1oqbLxjzxfjwA2VAoj8/BccwoeFESYBsv6XiJVRAp5b3pRpvMgdhfZCxV5vSppWbAukhqrBRVRj3jAxHnbfmvg181rcVw9ny4LBLbFdm2S2RRH\",\"token_symbol\":\"USDC\",\"token_name\":\"USD Coin\",\"decimals\":6}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "USDC is a US dollar-backed stablecoin issued by Circle. USDC is designed to provide a faster, safer, and more efficient way to send, spend, and exchange money around the world.",
+                      "tooltipUrl": "https://www.circle.com/en/usdc"
+                    },
+                    "name": "USDC Token",
+                    "ordinal": 10,
+                    "slug": "usdc-token-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "USDC",
+                    "ordinal": 0,
+                    "slug": "usdc",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USD Coin",
+                    "ordinal": 0,
+                    "slug": "usd-coin",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appID": "circle",
+                      "appMarketplaceURL": "https://app.circle.com/get-started",
+                      "bgColor": "#2775ca",
+                      "tagIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/circle-icon-white.png",
+                      "textColor": "#FFFFFF",
+                      "tooltipUrl": "https://www.circle.com/"
+                    },
+                    "name": "Circle",
+                    "ordinal": 0,
+                    "slug": "circle",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "USDC",
+              "private_tags": [],
+              "proxy_type": "eip1967_oz",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "231627",
+            "index": 13,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x43506849D7C04F9138D1A2050bbF3A0c054402dd",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "FiatTokenV2_2",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "delegatecall",
+            "value": "0"
+          },
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Parent reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x1445F32D1A74872bA41f3D8cF4022E9996120b31",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PancakeV3Pool",
+                    "ordinal": 0,
+                    "slug": "pancakev3pool",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PancakeV3Pool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "233767",
+            "index": 14,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d",
+            "transaction_index": 302,
+            "type": "staticcall",
+            "value": "0"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.logs",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: logs do recibo",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d"
+        ],
+        "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+        "logs": [],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.abi.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "description": "Blockscout: ABI verificada do contrato",
+      "payload": {
+        "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+        "contract": "NonfungiblePositionManager",
+        "role": "contract",
+        "abi_source": "explorer",
+        "functions": 39,
+        "events": 6
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "decoder.input",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística da calldata pela ABI",
+      "payload": {
+        "selector": "0xac9650d8",
+        "signature": "multicall(bytes[])",
+        "nested_signatures": [
+          "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))",
+          "refundETH()"
+        ],
+        "abi_evidence_ids": [
+          "explorer.abi.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+        ],
+        "calldata_evidence_ids": [
+          "explorer.transaction",
+          "rpc.transaction"
+        ]
+      },
+      "confidence": "decoded"
+    },
+    {
+      "id": "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "description": "Blockscout: código-fonte verificado de NonfungiblePositionManager",
+      "payload": {
+        "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+        "contract": "NonfungiblePositionManager",
+        "files": [
+          "contracts/NonfungiblePositionManager.sol",
+          "contracts/base/SelfPermit.sol",
+          "contracts/base/PeripheryValidation.sol",
+          "contracts/base/LiquidityManagement.sol",
+          "contracts/base/PoolInitializer.sol",
+          "contracts/base/PeripheryImmutableState.sol",
+          "contracts/base/ERC721Permit.sol",
+          "contracts/base/Multicall.sol",
+          "contracts/interfaces/INonfungiblePositionManager.sol"
+        ]
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "tool.1.get_contract_info",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+      "description": "Blockscout: metadados e ABI de 0x46a15b0b27311cedf172ab29e4f4766fbe7f4364 (ferramenta)",
+      "payload": {
+        "contracts": [
+          {
+            "address": "0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+            "name": "NonfungiblePositionManager",
+            "is_verified": true,
+            "proxy_type": null,
+            "implementations": []
+          }
+        ]
+      },
+      "confidence": "observed"
+    }
+  ],
+  "uncertainties": [
+    "Os elementos de data foram lidos como chamadas ao próprio contrato (padrão multicall) e decodificados pela mesma ABI, em modo estrito. Sem trace, não é possível dizer qual delas reverteu.",
+    "NonfungiblePositionManager não encontrado nos repositórios configurados (arquivo NonfungiblePositionManager.sol).",
+    "Não foi possível repetir a chamada no estado anterior ao bloco: o RPC recusou a consulta (access_denied)."
+  ],
+  "mode": "developer",
+  "explanation": {
+    "summary": "A transação `0xa0107a2a9736dfbde0c1dbfd0d53fd2e8c122f3b9177675e058735e427b1ae0d` chamada `multicall(bytes[])` falhou com revert. O revert retornado foi \"Price slippage check\" e ocorreu durante uma chamada interna (delegatecall) dentro de `multicall` ao tentar executar `mint(...)`/fluxo de adição de liquidez. Não foi possível repetir a transação no estado anterior pelo RPC disponível.",
+    "findings": [
+      {
+        "kind": "observed",
+        "statement": "A transação falhou de acordo com fontes indexadas e recibo RPC.",
+        "evidence_ids": [
+          "explorer.transaction",
+          "rpc.receipt"
+        ]
+      },
+      {
+        "kind": "decoded",
+        "statement": "Função externa chamada: `multicall(bytes[])` com dois payloads: primeiro `mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))`, segundo `refundETH()`. Argumentos do `mint` incluem `token0 = 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`, `token1 = 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2`, `fee = 100`, `amount0Desired = 173442`, `amount1Desired = 99999731491510043`, `amount0Min = 0`, `amount1Min = 97522639128243803`, `recipient = 0x143299ce2b02ee230bc66a70799c1088c4ebfb08`.",
+        "evidence_ids": [
+          "decoder.input"
+        ]
+      },
+      {
+        "kind": "observed",
+        "statement": "Várias chamadas internas e delegatecalls falharam durante a execução, incluindo delegatecall do próprio contrato e chamadas para `0xa0b8...` e `0xc02a...` conforme o trace indexado.",
+        "evidence_ids": [
+          "explorer.calls"
+        ]
+      },
+      {
+        "kind": "source",
+        "statement": "O contrato `Multicall.multicall` faz `delegatecall` para cada payload e, ao receber `success == false`, extrai e reverte com a string decodificada do `result` (linhas de tratamento de erro).",
+        "evidence_ids": [
+          "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+        ]
+      },
+      {
+        "kind": "source",
+        "statement": "Tanto em `LiquidityManagement.addLiquidity` quanto em `NonfungiblePositionManager.decreaseLiquidity` há um `require(..., 'Price slippage check')` que reverte quando os valores efetivos `amount0/amount1` são menores que `amount0Min/amount1Min`.",
+        "evidence_ids": [
+          "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364"
+        ]
+      },
+      {
+        "kind": "inference",
+        "statement": "O revert \"Price slippage check\" indica que, durante o fluxo de `mint`/`addLiquidity`, os valores retornados pelo pool (`amount0` ou `amount1`) ficaram abaixo dos mínimos exigidos (`amount0Min`/`amount1Min`) e portanto a transação foi revertida.",
+        "evidence_ids": [
+          "decoder.input",
+          "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+          "explorer.transaction"
+        ]
+      }
+    ],
+    "likely_causes": [
+      {
+        "description": "Os valores efetivos de token mintados foram menores que `amount1Min = 97522639128243803` (ou `amount0Min`), fazendo o `require` falhar durante `addLiquidity`/`mint`.",
+        "evidence_ids": [
+          "decoder.input",
+          "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+          "explorer.transaction"
+        ]
+      }
+    ],
+    "next_steps": [
+      "Localize o `require('Price slippage check')` no código-fonte citado para confirmar qual função (provavelmente `addLiquidity` -> `pool.mint` ou `decreaseLiquidity`) disparou o revert (use o trecho em `explorer.source...`).",
+      "Repetir a chamada localmente contra um nó archive para ler `pool.slot0()` e `positions(...)` no bloco anterior e simular a execução do `LiquidityAmounts.getLiquidityForAmounts` e `pool.mint` para calcular `amount0`/`amount1` reais e comparar com `amount0Min`/`amount1Min`.",
+      "Se o desvio de preço for esperado, aumentar `amountXMin` (ou tolerância) ou ajustar `amountXDesired`/ticks; caso contrário, investigar why pool state diverged (front-running, oráculo, ou mudanças de liquidez).",
+      "Evite reenviar com os mesmos parâmetros sem checar: a chamada provavelmente falhará novamente enquanto a condição de slippage não for atendida."
+    ],
+    "security_notes": [
+      {
+        "description": "O padrão `multicall` usa `delegatecall` e repropaga o revert string do callee; isso torna a mensagem de erro visível ao originador mas também indica que um revert interno interrompe todo o `multicall`. Verifique se isso é o comportamento desejado ao agregar operações sensíveis à ordem/estado.",
+        "evidence_ids": [
+          "explorer.source.0x46a15b0b27311cedf172ab29e4f4766fbe7f4364",
+          "explorer.calls"
+        ]
+      }
+    ],
+    "uncertainties": [
+      "Não é possível determinar exatamente qual chamada interna (ex.: `mint` vs outro caminho) gerou o revert apenas com os dados fornecidos; o indexador mostra múltiplas chamadas falhas `delegatecall` e `call`, mas sem trace completo não há um id único do site do revert (e o replay no bloco anterior foi negado). Evidence necessária: um trace de execução (debug_traceTransaction) ou réplica local com nó archive para confirmar valores retornados por `pool.mint` e qual `require` foi atingido."
+    ],
+    "discarded_items": 1,
+    "unverified_identifiers": [],
+    "usage": {
+      "provider": "openai",
+      "model": "gpt-5-mini",
+      "steps": 2,
+      "tool_calls": [
+        "get_contract_info"
+      ],
+      "input_tokens": 14795,
+      "output_tokens": 1531,
+      "thinking_tokens": 320,
+      "estimated_cost_usd": null,
+      "duration_ms": 18886
+    }
+  },
+  "explanation_issue": null
+}

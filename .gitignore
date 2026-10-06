@@ -1,0 +1,20 @@
+.env
+.env.*
+!.env.example
+!.env.local.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+node_modules/
+.next/
+*.tsbuildinfo
+coverage/
+.DS_Store
+*.log
+AGENTS.md
+
+# Local settings edited from the UI (profiles may contain secrets)
+config/local/

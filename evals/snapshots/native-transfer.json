@@ -1,0 +1,239 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+  "status": "success",
+  "summary": "A transação foi executada com sucesso segundo as fontes consultadas.",
+  "request_id": "snapshot",
+  "explorer_url": "https://eth.blockscout.com/tx/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+  "transaction": {
+    "sender": "0x9d34c01d7e848b5c62f4677cb65aab1385b47414",
+    "recipient": "0xbd790490685356a8dd9272b1bee5a978f88267dd",
+    "recipient_is_contract": false,
+    "created_contract": null,
+    "block_number": 26101025,
+    "block_hash": "0x555ef3cbba6240c97d80c5067fb761e183bfc814e1c729adbc73291d73c44ff0",
+    "value_raw": "2000000000000000",
+    "value_display": "0.002",
+    "native_currency": "ETH",
+    "calldata": "0x",
+    "selector": null,
+    "gas_limit": "21000",
+    "gas_used": "21000",
+    "gas_price": "233678323",
+    "decoded_input": null,
+    "field_sources": {
+      "sender": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient_is_contract": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_raw": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction",
+        "rpc.receipt"
+      ],
+      "gas_price": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "block_hash": [
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_display": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction",
+    "rpc.receipt"
+  ],
+  "calls": [],
+  "transfers": [],
+  "events": [],
+  "diagnosis": {
+    "confirmed": [],
+    "likely_causes": [],
+    "next_steps": [],
+    "revert": null,
+    "replay": null,
+    "state_reads": []
+  },
+  "contract_context": [],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "rpc.chain",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: rede verificada antes das leituras",
+      "payload": {
+        "method": "eth_chainId",
+        "result": 1
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0x",
+        "result": "success",
+        "hash": "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+        "revert_reason": null,
+        "created_contract": null,
+        "value": "2000000000000000",
+        "from": {
+          "hash": "0x9d34C01D7E848b5c62f4677Cb65aaB1385B47414"
+        },
+        "gas_used": "21000",
+        "status": "ok",
+        "to": {
+          "hash": "0xBd790490685356a8Dd9272b1BEE5A978F88267dD"
+        },
+        "gas_limit": "21000",
+        "gas_price": "233678323",
+        "block_number": 26101025
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.transaction",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionByHash (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77"
+        ],
+        "result": {
+          "gas": "0x5208",
+          "to": "0xbd790490685356a8dd9272b1bee5a978f88267dd",
+          "value": "0x71afd498d0000",
+          "input": "0x",
+          "hash": "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+          "blockHash": "0x555ef3cbba6240c97d80c5067fb761e183bfc814e1c729adbc73291d73c44ff0",
+          "blockNumber": "0x18e4521",
+          "transactionIndex": "0x47",
+          "from": "0x9d34c01d7e848b5c62f4677cb65aab1385b47414",
+          "gasPrice": "0xdeda5f3"
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.receipt",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionReceipt (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77"
+        ],
+        "result": {
+          "status": "0x1",
+          "transactionHash": "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77",
+          "transactionIndex": "0x47",
+          "blockHash": "0x555ef3cbba6240c97d80c5067fb761e183bfc814e1c729adbc73291d73c44ff0",
+          "blockNumber": "0x18e4521",
+          "gasUsed": "0x5208",
+          "effectiveGasPrice": "0xdeda5f3",
+          "from": "0x9d34c01d7e848b5c62f4677cb65aab1385b47414",
+          "to": "0xbd790490685356a8dd9272b1bee5a978f88267dd",
+          "contractAddress": null
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.logs",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: logs do recibo",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x8bd472ced0f1e374c30d0c4f54a6315fdd09db994cf836f8c7bab5d14c932d77"
+        ],
+        "blockHash": "0x555ef3cbba6240c97d80c5067fb761e183bfc814e1c729adbc73291d73c44ff0",
+        "logs": [],
+        "complete": true
+      },
+      "confidence": "observed"
+    }
+  ],
+  "uncertainties": [],
+  "mode": "support"
+}

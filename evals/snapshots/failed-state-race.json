@@ -1,0 +1,710 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+  "status": "failed",
+  "summary": "A transação falhou. O valor informado não deve ser tratado como transferência concluída. Função chamada, decodificada pela ABI: fillRelay((bytes32,bytes32,bytes32,bytes32,bytes32,uint256,uint256,uint256,uint256,uint32,uint32,bytes),uint256,bytes32).",
+  "request_id": "snapshot",
+  "explorer_url": "https://eth.blockscout.com/tx/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+  "transaction": {
+    "sender": "0xfd0aa7548823c40be6dd85682f0342f35dee121a",
+    "recipient": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+    "recipient_is_contract": true,
+    "created_contract": null,
+    "block_number": 26106986,
+    "block_hash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+    "value_raw": "0",
+    "value_display": "0",
+    "native_currency": "ETH",
+    "calldata": "0xdeff4b2400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000038000000000000000000000000fd0aa7548823c40be6dd85682f0342f35dee121a0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd350000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055d398326f99059ff775485246999027b3197955000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000eb0bde13bc31b0000000000000000000000000000000000000000000000000000000000001025e71f0000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000011945f000000000000000000000000000000000000000000000000000000006ac0351d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000",
+    "selector": "0xdeff4b24",
+    "gas_limit": "400000",
+    "gas_used": "43176",
+    "gas_price": "189929189",
+    "decoded_input": {
+      "function": "fillRelay",
+      "signature": "fillRelay((bytes32,bytes32,bytes32,bytes32,bytes32,uint256,uint256,uint256,uint256,uint32,uint32,bytes),uint256,bytes32)",
+      "selector": "0xdeff4b24",
+      "arguments": [
+        {
+          "name": "relayData",
+          "type": "(bytes32,bytes32,bytes32,bytes32,bytes32,uint256,uint256,uint256,uint256,uint32,uint32,bytes)",
+          "value": {
+            "depositor": "0x0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35",
+            "recipient": "0x0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35",
+            "exclusiveRelayer": "0x0000000000000000000000000000000000000000000000000000000000000000",
+            "inputToken": "0x00000000000000000000000055d398326f99059ff775485246999027b3197955",
+            "outputToken": "0x000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7",
+            "inputAmount": "270990000000000000000",
+            "outputAmount": "270919455",
+            "originChainId": "56",
+            "depositId": "1152095",
+            "fillDeadline": "1790981405",
+            "exclusivityDeadline": "0",
+            "message": "0x"
+          },
+          "hashed": false,
+          "truncated": false
+        },
+        {
+          "name": "repaymentChainId",
+          "type": "uint256",
+          "value": "56",
+          "hashed": false,
+          "truncated": false
+        },
+        {
+          "name": "repaymentAddress",
+          "type": "bytes32",
+          "value": "0x000000000000000000000000fd0aa7548823c40be6dd85682f0342f35dee121a",
+          "hashed": false,
+          "truncated": false
+        }
+      ],
+      "abi_source": "explorer",
+      "contract": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+      "abi_address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "evidence_ids": [
+        "decoder.input",
+        "explorer.contract.0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+        "explorer.abi.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    },
+    "field_sources": {
+      "sender": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "recipient_is_contract": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction",
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_raw": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction",
+        "rpc.receipt"
+      ],
+      "gas_price": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "block_hash": [
+        "rpc.transaction",
+        "rpc.receipt"
+      ],
+      "value_display": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "selector": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "decoded_input": [
+        "decoder.input",
+        "explorer.contract.0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+        "explorer.abi.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction",
+    "rpc.receipt"
+  ],
+  "calls": [
+    {
+      "sender": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+      "recipient": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "call_type": "delegatecall",
+      "success": false,
+      "value_raw": "0",
+      "evidence_ids": [
+        "explorer.calls"
+      ]
+    }
+  ],
+  "transfers": [],
+  "events": [],
+  "diagnosis": {
+    "confirmed": [
+      {
+        "description": "A transação falhou segundo as fontes consultadas.",
+        "evidence_ids": [
+          "explorer.transaction",
+          "rpc.receipt"
+        ]
+      },
+      {
+        "description": "Motivo da falha (explorer): erro customizado: RelayFilled().",
+        "evidence_ids": [
+          "explorer.transaction"
+        ]
+      }
+    ],
+    "likely_causes": [
+      {
+        "description": "O estado mudou dentro do próprio bloco: a mesma chamada executa sem erro no estado anterior ao bloco, então uma transação anterior no mesmo bloco provavelmente alterou a condição verificada (ex.: ordem já preenchida, preço ou saldo alterado).",
+        "evidence_ids": [
+          "rpc.replay",
+          "explorer.transaction",
+          "rpc.receipt"
+        ]
+      }
+    ],
+    "next_steps": [
+      "Verifique quando o contrato emite esse erro (trechos abaixo) e ajuste a chamada.",
+      "Compare com as transações anteriores no mesmo bloco para identificar o que mudou o estado; se a falha foi por gas, reenvie com limite maior.",
+      "Corrija a causa antes de reenviar: a mesma chamada tende a falhar de novo."
+    ],
+    "revert": {
+      "source": "explorer",
+      "kind": "custom_error",
+      "signature": "RelayFilled()",
+      "name": "RelayFilled",
+      "message": null,
+      "arguments": [],
+      "raw": "0x8f260c60",
+      "abi_address": null,
+      "ambiguous": false,
+      "evidence_ids": [
+        "explorer.transaction"
+      ]
+    },
+    "replay": "succeeded",
+    "state_reads": []
+  },
+  "contract_context": [
+    {
+      "origin": "explorer",
+      "contract": "Ethereum_SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "Ethereum_SpokePool",
+      "kind": "contract",
+      "reason": "contract_header",
+      "path": "contracts/spoke-pools/Ethereum_SpokePool.sol",
+      "start_line": 7,
+      "end_line": 11,
+      "code": "/**\n * @notice Ethereum L1 specific SpokePool. Used on Ethereum L1 to facilitate L2->L1 transfers.\n * @custom:security-contact bugs@across.to\n */\ncontract Ethereum_SpokePool is SpokePool, OwnableUpgradeable {",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "SpokePool.fillRelay",
+      "kind": "function",
+      "reason": "called_function",
+      "path": "contracts/spoke-pools/SpokePool.sol",
+      "start_line": 942,
+      "end_line": 1003,
+      "code": "    /**\n     * @notice Fulfill request to bridge cross chain by sending specified output tokens to the recipient.\n     * @dev The fee paid to relayers and the system should be captured in the spread between output\n     * amount and input amount when adjusted to be denominated in the input token. A relayer on the destination\n     * chain will send outputAmount of outputTokens to the recipient and receive inputTokens on a repayment\n     * chain of their choice. Therefore, the fee should account for destination fee transaction costs, the\n     * relayer's opportunity cost of capital while they wait to be refunded following an optimistic challenge\n     * window in the HubPool, and a system fee charged to relayers.\n     * @dev The hash of the relayData will be used to uniquely identify the deposit to fill, so\n     * modifying any params in it will result in a different hash and a different deposit. The hash will comprise\n     * all parameters passed to deposit() on the origin chain along with that chain's chainId(). This chain's\n     * chainId() must therefore match the destinationChainId passed into deposit.\n     * Relayers are only refunded for filling deposits with deposit hashes that map exactly to the one emitted by the\n     * origin SpokePool therefore the relayer should not modify any params in relayData.\n     * @dev Cannot fill more than once. Partial fills are not supported.\n     * @param relayData struct containing all the data needed to identify the deposit to be filled. Should match\n     * all the same-named parameters emitted in the origin chain FundsDeposited event.\n     * - depositor: The account credited with the deposit who can request to \"speed up\" this deposit by modifying\n     * the output amount, recipient, and message.\n     * - recipient The account receiving funds on this chain. Can be an EOA or a contract. If\n     * the output token is the wrapped native token for the chain, then the recipient will receive native token if\n     * an EOA or wrapped native token if a contract.\n     * - inputToken: The token pulled from the caller's account to initiate the deposit. The equivalent of this\n     * token on the repayment chain will be sent as a refund to the caller.\n     * - outputToken The token that the caller will send to the recipient on the destination chain. Must be an\n     * ERC20.\n     * - inputAmount: This amount, less a system fee, will be sent to the caller on their repayment chain of choice as a refund\n     * following an optimistic challenge window in the HubPool.\n     * - outputAmount: The amount of output tokens that the caller will send to the recipient.\n     * - originChainId: The origin chain identifier.\n     * - exclusiveRelayer The relayer that will be exclusively allowed to fill this deposit before the\n     * exclusivity deadline timestamp.\n     * - fillDeadline The deadline for the caller to fill the deposit. After this timestamp,\n     * the fill will revert on the destination chain.\n     * - exclusivityDeadline: The deadline for the exclusive relayer to fill the deposit. After this\n     * timestamp, anyone can fill this deposit. Note that if this value was set in deposit by adding an offset\n     * to the deposit's block.timestamp, there is re-org risk for the caller of this method because the event's\n     * block.timestamp can change. Read the comments in `deposit` about the `exclusivityParameter` for more details.\n     * - message The message to send to the recipient if the recipient is a contract that implements a\n     * handleV3AcrossMessage() public function\n     * @param repaymentChainId Chain of SpokePool where relayer wants to be refunded after the challenge window has\n     * passed. Will receive inputAmount of the equivalent token to inputToken on the repayment chain.\n     * @param repaymentAddress Address the relayer wants to be receive their refund at.\n     */\n    function fillRelay(\n        V3RelayData memory relayData,\n        uint256 repaymentChainId,\n        bytes32 repaymentAddress\n    ) public override nonReentrant unpausedFills nonV5Fill(relayData.message) {\n        _requireExclusiveFiller(relayData.exclusivityDeadline, relayData.exclusiveRelayer, msg.sender);\n\n        V3RelayExecutionParams memory relayExecution = V3RelayExecutionParams({\n            relay: relayData,\n            relayHash: getV3RelayHash(relayData),\n            updatedOutputAmount: relayData.outputAmount,\n            updatedRecipient: relayData.recipient,\n            updatedMessage: relayData.message,\n            repaymentChainId: repaymentChainId\n        });\n\n        _fillRelayV3(relayExecution, repaymentAddress, false);\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "ReentrancyGuardUpgradeable",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "ReentrancyGuardUpgradeable.nonReentrant",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "node_modules/@openzeppelin/contracts-upgradeable-v4/security/ReentrancyGuardUpgradeable.sol",
+      "start_line": 48,
+      "end_line": 59,
+      "code": "    /**\n     * @dev Prevents a contract from calling itself, directly or indirectly.\n     * Calling a `nonReentrant` function from another `nonReentrant`\n     * function is not supported. It is possible to prevent this from happening\n     * by making the `nonReentrant` function external, and making it call a\n     * `private` function that does the actual work.\n     */\n    modifier nonReentrant() {\n        _nonReentrantBefore();\n        _;\n        _nonReentrantAfter();\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "SpokePool.unpausedFills",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "contracts/spoke-pools/SpokePool.sol",
+      "start_line": 306,
+      "end_line": 309,
+      "code": "    modifier unpausedFills() {\n        if (pausedFills) revert FillsArePaused();\n        _;\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "SpokePool.nonV5Fill",
+      "kind": "modifier",
+      "reason": "related_modifier",
+      "path": "contracts/spoke-pools/SpokePool.sol",
+      "start_line": 311,
+      "end_line": 318,
+      "code": "    // Quarantines V5-tagged deposits from non-V5 settlement paths (regular fills, updated fills, slow-fill\n    // requests and executions). V5 deposits commit to a Gateway execution witness in `message` and are only\n    // consumable through the V5 entrypoints that check it; without this guard the witness binding would be\n    // bypassable.\n    modifier nonV5Fill(bytes memory message) {\n        if (_isV5Message(message)) revert V5FillOnly();\n        _;\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "SpokePool._requireExclusiveFiller",
+      "kind": "function",
+      "reason": "related_function",
+      "path": "contracts/spoke-pools/SpokePool.sol",
+      "start_line": 1648,
+      "end_line": 1658,
+      "code": "    // Exclusivity deadline is inclusive and is the latest timestamp that the exclusive relayer has sole right\n    // to fi",
+      "truncated": true,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "V3SpokePoolInterface",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "V3SpokePoolInterface.RelayFilled",
+      "kind": "error",
+      "reason": "error_declaration",
+      "path": "contracts/interfaces/V3SpokePoolInterface.sol",
+      "start_line": 339,
+      "end_line": 339,
+      "code": "    error RelayFilled();",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    },
+    {
+      "origin": "explorer",
+      "contract": "SpokePool",
+      "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "symbol": "SpokePool._fillRelay",
+      "kind": "function",
+      "reason": "revert_site",
+      "path": "contracts/spoke-pools/SpokePool.sol",
+      "start_line": 1705,
+      "end_line": 1744,
+      "code": "    // @param payer: address that fast-fill output tokens are pulled from. Always msg.sender for V3 fills; V5\n    // fills pull from the Gateway's current submitter (executor mode) or the executing tape (adapter mode).\n    function _fillRelay(\n        V3RelayExecutionParams memory relayExecution,\n        bytes32 relayer,\n        bool isSlowFill,\n        address payer\n    ) internal {\n        V3RelayData memory relayData = relayExecution.relay;\n\n        if (relayData.fillDeadline < getCurrentTime()) revert ExpiredFillDeadline();\n\n        bytes32 relayHash = relayExecution.relayHash;\n\n        // If a slow fill for this fill was requested then the relayFills value for this hash will be\n        // FillStatus.RequestedSlowFill. Therefore, if this is the status, then this fast fill\n        // will be replacing the slow fill. If this is a slow fill execution, then the following variable\n        // is trivially true. We'll emit this value in the FilledRelay\n        // event to assist the Dataworker in knowing when to return funds back to the HubPool that can no longer\n        // be used for a slow fill execution.\n        FillType fillType = isSlowFill\n            ? FillType.SlowFill // The following is true if this is a fast fill that was sent after a slow fill request.\n            : (\n                fillStatuses[relayExecution.relayHash] == uint256(FillStatus.RequestedSlowFill)\n                    ? FillType.ReplacedSlowFill\n                    : FillType.FastFill\n            );\n\n        // @dev This function doesn't support partial fills. Therefore, we associate the relay hash with\n        // an enum tracking its fill status. All filled relays, whether slow or fast fills, are set to the Filled\n        // status. However, we also use this slot to track whether this fill had a slow fill requested. Therefore\n        // we can include a bool in the FilledRelay event making it easy for the dataworker to compute if this\n        // fill was a fast fill that replaced a slow fill and therefore this SpokePool has excess funds that it\n        // needs to send back to the HubPool.\n        if (fillStatuses[relayHash] == uint256(FillStatus.Filled)) revert RelayFilled();\n        fillStatuses[relayHash] = uint256(FillStatus.Filled);\n\n        _emitFilledRelayEvent(relayExecution, relayData, relayer, fillType);\n        _transferTokensToRecipient(relayExecution, relayData, payer, isSlowFill);\n    }",
+      "truncated": false,
+      "repository": null,
+      "commit": null,
+      "url": "https://eth.blockscout.com/address/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84?tab=contract",
+      "evidence_ids": [
+        "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+      ]
+    }
+  ],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "rpc.chain",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: rede verificada antes das leituras",
+      "payload": {
+        "method": "eth_chainId",
+        "result": 1
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0xdeff4b2400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000038000000000000000000000000fd0aa7548823c40be6dd85682f0342f35dee121a0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd350000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055d398326f99059ff775485246999027b3197955000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000eb0bde13bc31b0000000000000000000000000000000000000000000000000000000000001025e71f0000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000011945f000000000000000000000000000000000000000000000000000000006ac0351d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000",
+        "result": "Reverted",
+        "hash": "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+        "revert_reason": {
+          "method_call": "RelayFilled()",
+          "method_id": "8f260c60",
+          "parameters": []
+        },
+        "created_contract": null,
+        "value": "0",
+        "from": {
+          "hash": "0xfd0Aa7548823C40BE6Dd85682f0342F35Dee121A"
+        },
+        "gas_used": "43176",
+        "status": "error",
+        "to": {
+          "hash": "0x5c7BCd6E7De5423a257D81B442095A1a6ced35C5"
+        },
+        "gas_limit": "400000",
+        "gas_price": "189929189",
+        "block_number": 26106986
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.transaction",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionByHash (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770"
+        ],
+        "result": {
+          "gas": "0x61a80",
+          "to": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+          "value": "0x0",
+          "input": "0xdeff4b2400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000038000000000000000000000000fd0aa7548823c40be6dd85682f0342f35dee121a0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd350000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055d398326f99059ff775485246999027b3197955000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000eb0bde13bc31b0000000000000000000000000000000000000000000000000000000000001025e71f0000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000011945f000000000000000000000000000000000000000000000000000000006ac0351d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+          "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+          "blockNumber": "0x18e5c6a",
+          "transactionIndex": "0x131",
+          "from": "0xfd0aa7548823c40be6dd85682f0342f35dee121a",
+          "gasPrice": "0xb5216e5"
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.receipt",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionReceipt (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770"
+        ],
+        "result": {
+          "status": "0x0",
+          "transactionHash": "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+          "transactionIndex": "0x131",
+          "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+          "blockNumber": "0x18e5c6a",
+          "gasUsed": "0xa8a8",
+          "effectiveGasPrice": "0xb5216e5",
+          "from": "0xfd0aa7548823c40be6dd85682f0342f35dee121a",
+          "to": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+          "contractAddress": null
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [
+          {
+            "block_number": 26106986,
+            "created_contract": null,
+            "error": "Reverted",
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x5c7BCd6E7De5423a257D81B442095A1a6ced35C5",
+              "implementations": [
+                {
+                  "address_hash": "0x456Ac26E5ec083EE9889eBa0d1a0A582502B8e84",
+                  "name": "Ethereum_SpokePool"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "bgColor": "#6DF8D7",
+                      "projectName": "Across Protocol",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x5727384b871a3406810c22ea2f1bbb6544acf1c8c04e1fab1ad1c29e525f074a@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#2F3237",
+                      "tooltipDescription": "Across Protocol's official Ethereum Spoke Pool Proxy contract",
+                      "tooltipUrl": "https://across.to/",
+                      "verifiedDomains": [
+                        "v2.across.to"
+                      ]
+                    },
+                    "name": "Ethereum Spoke Pool Proxy",
+                    "ordinal": 10,
+                    "slug": "ethereum-spoke-pool-proxy",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "ETH Spokepool",
+                    "ordinal": 0,
+                    "slug": "eth-spokepool",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Across Protocol",
+                      "appID": "across-protocol",
+                      "bgColor": "#2F3237",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/across-protocol.svg",
+                      "tagUrl": "https://across.to/bridge?utm_source=Blockscout",
+                      "textColor": "#6DF8D7",
+                      "tooltipDescription": "Bridging method that combines an optimistic oracle, bonded relayers and single-sided liquidity pools to provide decentralized instant transactions from rollup chains to Ethereum mainnet.",
+                      "tooltipTitle": "Across Protocol",
+                      "tooltipUrl": "https://across.to/bridge"
+                    },
+                    "name": "Across Protocol",
+                    "ordinal": 0,
+                    "slug": "across-protocol",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "ERC1967Proxy",
+              "private_tags": [],
+              "proxy_type": "eip1967",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "gas_limit": "364680",
+            "index": 1,
+            "success": false,
+            "timestamp": "2026-10-02T20:20:11.000000Z",
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x456Ac26E5ec083EE9889eBa0d1a0A582502B8e84",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "Ethereum_SpokePool",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "transaction_hash": "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770",
+            "transaction_index": 305,
+            "type": "delegatecall",
+            "value": "0"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.logs",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: logs do recibo",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x3c2c995bdb8e626f3520c7c38b2ad0e63efba48f6f7fc119aee2b661c3bbd770"
+        ],
+        "blockHash": "0x97c2772596899be082afd2327a911f3726f6b30e18cb304c4db3c1da3e19fa35",
+        "logs": [],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.contract.0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+      "description": "Blockscout: metadados do contrato e implementação de proxy",
+      "payload": {
+        "address": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+        "name": "ERC1967Proxy",
+        "is_verified": true,
+        "proxy_type": "eip1967",
+        "implementations": [
+          "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+        ]
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.abi.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "description": "Blockscout: ABI verificada do contrato",
+      "payload": {
+        "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+        "contract": "Ethereum_SpokePool",
+        "role": "implementation",
+        "abi_source": "explorer",
+        "functions": 65,
+        "events": 25
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "decoder.input",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística da calldata pela ABI",
+      "payload": {
+        "selector": "0xdeff4b24",
+        "signature": "fillRelay((bytes32,bytes32,bytes32,bytes32,bytes32,uint256,uint256,uint256,uint256,uint32,uint32,bytes),uint256,bytes32)",
+        "abi_evidence_ids": [
+          "explorer.contract.0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+          "explorer.abi.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84"
+        ],
+        "calldata_evidence_ids": [
+          "explorer.transaction",
+          "rpc.transaction"
+        ]
+      },
+      "confidence": "decoded"
+    },
+    {
+      "id": "explorer.source.0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+      "description": "Blockscout: código-fonte verificado de Ethereum_SpokePool",
+      "payload": {
+        "address": "0x456ac26e5ec083ee9889eba0d1a0a582502b8e84",
+        "contract": "Ethereum_SpokePool",
+        "files": [
+          "contracts/spoke-pools/Ethereum_SpokePool.sol",
+          "node_modules/@openzeppelin/contracts-upgradeable-v4/access/OwnableUpgradeable.sol",
+          "contracts/spoke-pools/SpokePool.sol",
+          "node_modules/@openzeppelin/contracts-upgradeable-v4/utils/ContextUpgradeable.sol",
+          "node_modules/@openzeppelin/contracts-upgradeable-v4/proxy/utils/Initializable.sol",
+          "contracts/libraries/SafeTransferERC20.sol",
+          "contracts/external/interfaces/IAcrossV5ExecutorAdapter.sol",
+          "contracts/external/interfaces/IAcrossV5Executor.sol",
+          "contracts/libraries/OFTTransportAdapter.sol",
+          "contracts/interfaces/ERC7683.sol",
+          "contracts/upgradeable/EIP712CrossChainUpgradeable.sol",
+          "contracts/upgradeable/MultiCallerUpgradeable.sol",
+          "node_modules/@openzeppelin/contracts-upgradeable-v4/security/ReentrancyGuardUpgradeable.sol",
+          "node_modules/@openzeppelin/contracts-upgradeable-v4/proxy/utils/UUPSUpgradeable.sol",
+          "contracts/interfaces/SpokePoolInterface.sol"
+        ]
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.replay",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_call repetindo a transação no bloco 0x18e5c69",
+      "payload": {
+        "method": "eth_call",
+        "params": [
+          {
+            "from": "0xfd0aa7548823c40be6dd85682f0342f35dee121a",
+            "to": "0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5",
+            "data": "0xdeff4b2400000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000038000000000000000000000000fd0aa7548823c40be6dd85682f0342f35dee121a0000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd350000000000000000000000004952b0f4c0ad8efaef253257c8078c55c022bd35000000000000000000000000000000000000000000000000000000000000000000000000000000000000000055d398326f99059ff775485246999027b3197955000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec700000000000000000000000000000000000000000000000eb0bde13bc31b0000000000000000000000000000000000000000000000000000000000001025e71f0000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000011945f000000000000000000000000000000000000000000000000000000006ac0351d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001800000000000000000000000000000000000000000000000000000000000000000",
+            "value": "0x0",
+            "gas": "0x61a80"
+          },
+          "0x18e5c69"
+        ],
+        "reverted": false,
+        "data": "0x"
+      },
+      "confidence": "observed"
+    }
+  ],
+  "uncertainties": [
+    "O contrato 0x5c7bcd6e7de5423a257d81b442095a1a6ced35c5 é um proxy. A implementação 0x456ac26e5ec083ee9889eba0d1a0a582502b8e84 é a atual informada pelo explorer e pode diferir da vigente no bloco da transação; confirme o slot de implementação por RPC histórico se necessário.",
+    "Ethereum_SpokePool não encontrado nos repositórios configurados (arquivo Ethereum_SpokePool.sol)."
+  ],
+  "mode": "developer"
+}

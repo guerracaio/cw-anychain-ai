@@ -1,0 +1,138 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112",
+  "status": "success",
+  "summary": "A transação foi executada com sucesso segundo as fontes consultadas.",
+  "request_id": "5ad68b5ba9d546a5bd4aedb36eb6b674",
+  "explorer_url": "https://eth.blockscout.com/tx/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112",
+  "transaction": {
+    "sender": "0xdfaa75323fb721e5f29d43859390f62cc4b600b8",
+    "recipient": "0x5b5ed27fdd84a0a5d4047783bbe678729a2dbc03",
+    "created_contract": null,
+    "block_number": 26100978,
+    "block_hash": null,
+    "value_raw": "6417720000000000",
+    "value_display": "0.00641772",
+    "native_currency": "ETH",
+    "calldata": "0x",
+    "selector": null,
+    "gas_limit": "75000",
+    "gas_used": "21000",
+    "gas_price": "102124527",
+    "field_sources": {
+      "sender": [
+        "explorer.transaction"
+      ],
+      "recipient": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction"
+      ],
+      "value_raw": [
+        "explorer.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction"
+      ],
+      "gas_price": [
+        "explorer.transaction"
+      ],
+      "value_display": [
+        "explorer.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction"
+  ],
+  "calls": [],
+  "transfers": [],
+  "events": [],
+  "diagnosis": {
+    "confirmed": [],
+    "likely_causes": [],
+    "next_steps": []
+  },
+  "contract_context": [],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0x",
+        "result": "success",
+        "hash": "0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112",
+        "created_contract": null,
+        "value": "6417720000000000",
+        "from": {
+          "hash": "0xDFaa75323fB721e5f29D43859390f62Cc4B600b8"
+        },
+        "gas_used": "21000",
+        "status": "ok",
+        "to": {
+          "hash": "0x5B5ED27FDD84A0A5d4047783bbe678729A2DBC03"
+        },
+        "gas_limit": "75000",
+        "gas_price": "102124527",
+        "block_number": 26100978
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x6e2ecc52806ff3d025932b82b43714d5304c4a136592b74ed648c5d61923e112/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    }
+  ],
+  "uncertainties": [
+    "RPC não configurado: recibo bruto e consultas de estado indisponíveis. Defina RPC_URL para habilitar essas fontes.",
+    "ABI, eventos decodificados e contexto de contratos ainda não são resolvidos. São necessários ABI/código verificado para interpretar a chamada."
+  ]
+}

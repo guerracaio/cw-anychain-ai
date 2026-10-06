@@ -1,0 +1,463 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+  "status": "success",
+  "summary": "A transação foi executada com sucesso segundo as fontes consultadas.",
+  "request_id": "snapshot",
+  "explorer_url": "https://eth.blockscout.com/tx/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+  "transaction": {
+    "sender": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13",
+    "recipient": "0x6b75d8af000000e20b7a7ddf000ba900b4009a80",
+    "recipient_is_contract": true,
+    "created_contract": null,
+    "block_number": 20568153,
+    "block_hash": "0x8869676badd8c2cc48de26870c63d56dfebb11f576ab7a14c3b0c62718ed7839",
+    "value_raw": "89",
+    "value_display": "0.000000000000000089",
+    "native_currency": "ETH",
+    "calldata": "0x2b2c3f18b3236d6c6c1a79522696ee70b1c28932d8902f01ffffff06004d521577f820525964c392352bb220482f1aa63b",
+    "selector": "0x2b2c3f18",
+    "gas_limit": "20000000",
+    "gas_used": "58766",
+    "gas_price": "2985632028",
+    "decoded_input": null,
+    "field_sources": {
+      "sender": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "recipient": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "recipient_is_contract": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "value_raw": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction"
+      ],
+      "gas_price": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "block_hash": [
+        "rpc.transaction"
+      ],
+      "value_display": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ],
+      "selector": [
+        "explorer.transaction",
+        "rpc.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction"
+  ],
+  "calls": [],
+  "transfers": [
+    {
+      "sender": "0x6b75d8af000000e20b7a7ddf000ba900b4009a80",
+      "recipient": "0x4d521577f820525964c392352bb220482f1aa63b",
+      "token_address": "0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+      "token_symbol": "PEGA",
+      "token_type": "ERC-20",
+      "total": {
+        "decimals": "9",
+        "value": "8589934336"
+      },
+      "evidence_ids": [
+        "explorer.transfers"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "address": "0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+      "index": 153,
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000006b75d8af000000e20b7a7ddf000ba900b4009a80",
+        "0x0000000000000000000000004d521577f820525964c392352bb220482f1aa63b"
+      ],
+      "data": "0x00000000000000000000000000000000000000000000000000000001ffffff00",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "arguments": [
+          {
+            "name": "from",
+            "type": "address",
+            "value": "0x6b75d8af000000e20b7a7ddf000ba900b4009a80",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "to",
+            "type": "address",
+            "value": "0x4d521577f820525964c392352bb220482f1aa63b",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "value",
+            "type": "uint256",
+            "value": "8589934336",
+            "hashed": false,
+            "truncated": false
+          }
+        ],
+        "abi_source": "explorer",
+        "abi_address": "0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+        "evidence_ids": [
+          "decoder.logs",
+          "explorer.abi.0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+          "explorer.logs"
+        ]
+      },
+      "evidence_ids": [
+        "explorer.logs"
+      ]
+    }
+  ],
+  "diagnosis": {
+    "confirmed": [],
+    "likely_causes": [],
+    "next_steps": [],
+    "revert": null,
+    "replay": null,
+    "state_reads": []
+  },
+  "contract_context": [],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "rpc.chain",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: rede verificada antes das leituras",
+      "payload": {
+        "method": "eth_chainId",
+        "result": 1
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0x2b2c3f18b3236d6c6c1a79522696ee70b1c28932d8902f01ffffff06004d521577f820525964c392352bb220482f1aa63b",
+        "result": "success",
+        "hash": "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+        "revert_reason": null,
+        "created_contract": null,
+        "value": "89",
+        "from": {
+          "hash": "0xae2Fc483527B8EF99EB5D9B44875F005ba1FaE13"
+        },
+        "gas_used": "58766",
+        "status": "ok",
+        "to": {
+          "hash": "0x6b75d8AF000000e20B7a7DDf000Ba900b4009A80"
+        },
+        "gas_limit": "20000000",
+        "gas_price": "2985632028",
+        "block_number": 20568153
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.transaction",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionByHash (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3"
+        ],
+        "result": {
+          "gas": "0x1312d00",
+          "to": "0x6b75d8af000000e20b7a7ddf000ba900b4009a80",
+          "value": "0x59",
+          "input": "0x2b2c3f18b3236d6c6c1a79522696ee70b1c28932d8902f01ffffff06004d521577f820525964c392352bb220482f1aa63b",
+          "hash": "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+          "blockHash": "0x8869676badd8c2cc48de26870c63d56dfebb11f576ab7a14c3b0c62718ed7839",
+          "blockNumber": "0x139d859",
+          "transactionIndex": "0x23",
+          "from": "0xae2fc483527b8ef99eb5d9b44875f005ba1fae13",
+          "gasPrice": "0xb1f5211c"
+        }
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "rpc.receipt",
+      "source_type": "rpc",
+      "source_url": null,
+      "description": "RPC: eth_getTransactionReceipt (bloco informado no resultado)",
+      "payload": {
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3"
+        ],
+        "result": null
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x18b3236D6C6C1A79522696Ee70b1c28932D8902F",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "PEPEMAGA",
+                    "ordinal": 0,
+                    "slug": "pepemaga",
+                    "tagType": "name"
+                  }
+                ]
+              },
+              "name": "PepeMaga",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0x8869676badd8c2cc48de26870c63d56dfebb11f576ab7a14c3b0c62718ed7839",
+            "block_number": 20568153,
+            "block_timestamp": "2024-08-20T06:49:35.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000001ffffff00",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x6b75d8AF000000e20B7a7DDf000Ba900b4009A80"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0x4D521577f820525964C392352bB220482F1Aa63b"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "8589934336"
+                }
+              ]
+            },
+            "index": 153,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000006b75d8af000000e20b7a7ddf000ba900b4009a80",
+              "0x0000000000000000000000004d521577f820525964c392352bb220482f1aa63b",
+              null
+            ],
+            "transaction_hash": "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [
+          {
+            "block_hash": "0x8869676badd8c2cc48de26870c63d56dfebb11f576ab7a14c3b0c62718ed7839",
+            "block_number": 20568153,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x6b75d8AF000000e20B7a7DDf000Ba900b4009A80",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "jaredfromsubway: MEV Bot",
+                    "ordinal": 10,
+                    "slug": "jaredfromsubway-mev-bot",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot: 0x6b7...A80",
+                    "ordinal": 10,
+                    "slug": "mev-bot-0x6b7a80",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot",
+                    "ordinal": 0,
+                    "slug": "mev-bot",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "jaredfromsubway",
+                    "ordinal": 0,
+                    "slug": "jaredfromsubway",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 153,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x4D521577f820525964C392352bB220482F1Aa63b",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x18b3236D6C6C1A79522696Ee70b1c28932D8902F",
+              "circulating_market_cap": null,
+              "circulating_supply": null,
+              "decimals": "9",
+              "exchange_rate": null,
+              "holders_count": "813",
+              "icon_url": null,
+              "name": "PepeMaga",
+              "reputation": "ok",
+              "symbol": "PEGA",
+              "total_supply": "420690000000000000000",
+              "type": "ERC-20",
+              "volume_24h": null
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "9",
+              "value": "8589934336"
+            },
+            "transaction_hash": "0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3",
+            "type": "token_transfer"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x389e8e971e4c8003cfd7039cc5bf9e92f114ff1226f78d4105e87420771ad5c3/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.abi.0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+      "description": "Blockscout: ABI verificada do contrato",
+      "payload": {
+        "address": "0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+        "contract": "PepeMaga",
+        "role": "contract",
+        "abi_source": "explorer",
+        "functions": 22,
+        "events": 4
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "decoder.logs",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística dos logs pela ABI do emissor",
+      "payload": {
+        "decoded": [
+          {
+            "index": 153,
+            "address": "0x18b3236d6c6c1a79522696ee70b1c28932d8902f",
+            "signature": "Transfer(address,address,uint256)"
+          }
+        ]
+      },
+      "confidence": "decoded"
+    }
+  ],
+  "uncertainties": [
+    "rpc.receipt: resultado nulo; não confirma pendência nem inexistência. Confira o hash, a rede e a sincronização do provedor.",
+    "explorer.calls: coleta incompleta (timeout). Consulte o explorer para os dados restantes.",
+    "Chamada principal não decodificada (explorer: ABI não verificada ou não publicada no explorer; repository: nome do contrato desconhecido para buscar no repositório). O seletor 0x2b2c3f18 é apenas um prefixo da calldata e não confirma a identidade da função; é necessária a ABI verificada do contrato de destino.",
+    "Nome do contrato 0x6b75d8af000000e20b7a7ddf000ba900b4009a80 desconhecido: o código-fonte não pôde ser localizado. É necessário código verificado no explorer ou um mapeamento em repositories[].contracts."
+  ],
+  "mode": "developer"
+}

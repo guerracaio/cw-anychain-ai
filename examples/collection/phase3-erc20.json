@@ -1,0 +1,488 @@
+{
+  "network": "ethereum-mainnet",
+  "tx_hash": "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9",
+  "status": "success",
+  "summary": "A transação foi executada com sucesso segundo as fontes consultadas. Função chamada, decodificada pela ABI: transfer(address,uint256).",
+  "request_id": "002340c862b84f0d98100864ffa20864",
+  "explorer_url": "https://eth.blockscout.com/tx/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9",
+  "transaction": {
+    "sender": "0x8f8d1206d1bce12ff892731f8a140ed18b93884e",
+    "recipient": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    "created_contract": null,
+    "block_number": 26100927,
+    "block_hash": null,
+    "value_raw": "0",
+    "value_display": "0",
+    "native_currency": "ETH",
+    "calldata": "0xa9059cbb000000000000000000000000e0fe6653425be82c3f6f5e6e9142e145771cdd260000000000000000000000000000000000000000000000000000000002ee9470",
+    "selector": "0xa9059cbb",
+    "gas_limit": "46491",
+    "gas_used": "46109",
+    "gas_price": "2116426354",
+    "decoded_input": {
+      "function": "transfer",
+      "signature": "transfer(address,uint256)",
+      "selector": "0xa9059cbb",
+      "arguments": [
+        {
+          "name": "_to",
+          "type": "address",
+          "value": "0xe0fe6653425be82c3f6f5e6e9142e145771cdd26",
+          "hashed": false,
+          "truncated": false
+        },
+        {
+          "name": "_value",
+          "type": "uint256",
+          "value": "49190000",
+          "hashed": false,
+          "truncated": false
+        }
+      ],
+      "abi_source": "explorer",
+      "contract": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "abi_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "evidence_ids": [
+        "decoder.input",
+        "explorer.abi.0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "explorer.transaction"
+      ]
+    },
+    "field_sources": {
+      "sender": [
+        "explorer.transaction"
+      ],
+      "recipient": [
+        "explorer.transaction"
+      ],
+      "block_number": [
+        "explorer.transaction"
+      ],
+      "value_raw": [
+        "explorer.transaction"
+      ],
+      "calldata": [
+        "explorer.transaction"
+      ],
+      "gas_limit": [
+        "explorer.transaction"
+      ],
+      "gas_used": [
+        "explorer.transaction"
+      ],
+      "gas_price": [
+        "explorer.transaction"
+      ],
+      "value_display": [
+        "explorer.transaction"
+      ],
+      "selector": [
+        "explorer.transaction"
+      ],
+      "decoded_input": [
+        "decoder.input",
+        "explorer.abi.0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "explorer.transaction"
+      ]
+    }
+  },
+  "status_evidence_ids": [
+    "explorer.transaction"
+  ],
+  "calls": [],
+  "transfers": [
+    {
+      "sender": "0x8f8d1206d1bce12ff892731f8a140ed18b93884e",
+      "recipient": "0xe0fe6653425be82c3f6f5e6e9142e145771cdd26",
+      "token_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "token_symbol": "USDT",
+      "token_type": "ERC-20",
+      "total": {
+        "decimals": "6",
+        "value": "49190000"
+      },
+      "evidence_ids": [
+        "explorer.transfers"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "index": 441,
+      "topics": [
+        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+        "0x0000000000000000000000008f8d1206d1bce12ff892731f8a140ed18b93884e",
+        "0x000000000000000000000000e0fe6653425be82c3f6f5e6e9142e145771cdd26"
+      ],
+      "data": "0x0000000000000000000000000000000000000000000000000000000002ee9470",
+      "decoded": {
+        "name": "Transfer",
+        "signature": "Transfer(address,address,uint256)",
+        "arguments": [
+          {
+            "name": "from",
+            "type": "address",
+            "value": "0x8f8d1206d1bce12ff892731f8a140ed18b93884e",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "to",
+            "type": "address",
+            "value": "0xe0fe6653425be82c3f6f5e6e9142e145771cdd26",
+            "hashed": false,
+            "truncated": false
+          },
+          {
+            "name": "value",
+            "type": "uint256",
+            "value": "49190000",
+            "hashed": false,
+            "truncated": false
+          }
+        ],
+        "abi_source": "explorer",
+        "abi_address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "evidence_ids": [
+          "decoder.logs",
+          "explorer.abi.0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "explorer.logs"
+        ]
+      },
+      "evidence_ids": [
+        "explorer.logs"
+      ]
+    }
+  ],
+  "diagnosis": {
+    "confirmed": [],
+    "likely_causes": [],
+    "next_steps": []
+  },
+  "contract_context": [],
+  "security_notes": [],
+  "sources": [
+    {
+      "id": "explorer.transaction",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9",
+      "description": "Blockscout: dados indexados da transação",
+      "payload": {
+        "raw_input": "0xa9059cbb000000000000000000000000e0fe6653425be82c3f6f5e6e9142e145771cdd260000000000000000000000000000000000000000000000000000000002ee9470",
+        "result": "success",
+        "hash": "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9",
+        "created_contract": null,
+        "value": "0",
+        "from": {
+          "hash": "0x8f8d1206d1bCe12ff892731f8A140ed18B93884e"
+        },
+        "gas_used": "46109",
+        "status": "ok",
+        "to": {
+          "hash": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+        },
+        "gas_limit": "46491",
+        "gas_price": "2116426354",
+        "block_number": 26100927
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.logs",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/logs",
+      "description": "Blockscout: logs",
+      "payload": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Tether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xca4f86e999bee421567b4e8a094a7dff96fa821e9023a63b87f12b64d2356094@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmZF9JKGaGfT7LsARQaFdUUATDha4Ecx9PziFu2M8ifFmR/Bce2S3tXG2WL6pLnJAyHJyQ9B1MenRPiFnSVsNBgGXyWiNKTgcnTFcFjCcB9ujE5tJG7CjurLSL6XHoPQfu3Re4tqJ\",\"token_symbol\":\"USDT\",\"token_name\":\"Tether\",\"decimals\":6}",
+                      "tooltipDescription": "Tether gives you the joint benefits of open blockchain technology and traditional currency by converting your cash into a stable digital currency equivalent.",
+                      "tooltipUrl": "https://tether.to/",
+                      "verifiedDomains": [
+                        "app.mav.xyz",
+                        "www.sushi.com",
+                        "apeswap.finance",
+                        "app.firebird.finance",
+                        "app.uniswap.org",
+                        "swap.defillama.com",
+                        "swapr.eth.limo",
+                        "stackly.eth.limo",
+                        "traderjoexyz.com"
+                      ]
+                    },
+                    "name": "USDT Stablecoin",
+                    "ordinal": 10,
+                    "slug": "usdt-stablecoin-1",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Stablecoin",
+                    "ordinal": 0,
+                    "slug": "stablecoin",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tooltipDescription": "Address blocked by a custodial stablecoin provider"
+                    },
+                    "name": "BLOCKED",
+                    "ordinal": 0,
+                    "slug": "blocked",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "USDT",
+                    "ordinal": 0,
+                    "slug": "usdt",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Tether",
+                    "ordinal": 0,
+                    "slug": "tether",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "TetherToken",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0x8eba24d03578f20985b8f6cd87c6c4278150aa17259d04df5217c0bacfbc2aef",
+            "block_number": 26100927,
+            "block_timestamp": "2026-10-02T00:02:47.000000Z",
+            "data": "0x0000000000000000000000000000000000000000000000000000000002ee9470",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x8f8d1206d1bCe12ff892731f8A140ed18B93884e"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xe0fe6653425Be82c3f6f5e6E9142e145771cDd26"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "49190000"
+                }
+              ]
+            },
+            "index": 441,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x0000000000000000000000008f8d1206d1bce12ff892731f8a140ed18b93884e",
+              "0x000000000000000000000000e0fe6653425be82c3f6f5e6e9142e145771cdd26",
+              null
+            ],
+            "transaction_hash": "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/logs"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.transfers",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/token-transfers",
+      "description": "Blockscout: token-transfers",
+      "payload": {
+        "items": [
+          {
+            "block_hash": "0x8eba24d03578f20985b8f6cd87c6c4278150aa17259d04df5217c0bacfbc2aef",
+            "block_number": 26100927,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x8f8d1206d1bCe12ff892731f8A140ed18B93884e",
+              "implementations": [
+                {
+                  "address_hash": "0x0000Fb7702036ff9f76044a501ac1aA74cbab16b",
+                  "name": "UniversalGaslessDelegate"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": "eip7702",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 441,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xe0fe6653425Be82c3f6f5e6E9142e145771cDd26",
+              "implementations": [
+                {
+                  "address_hash": "0x0000Fb7702036ff9f76044a501ac1aA74cbab16b",
+                  "name": "UniversalGaslessDelegate"
+                }
+              ],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": "eip7702",
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+              "circulating_market_cap": "183820509544.18478",
+              "circulating_supply": null,
+              "decimals": "6",
+              "exchange_rate": "0.999722",
+              "holders_count": "16893961",
+              "icon_url": "https://assets.coingecko.com/coins/images/325/small/Tether.png?1696501661",
+              "name": "Tether",
+              "reputation": "ok",
+              "symbol": "USDT",
+              "total_supply": "88303053982363963",
+              "type": "ERC-20",
+              "volume_24h": "64151179903.05914"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "6",
+              "value": "49190000"
+            },
+            "transaction_hash": "0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9",
+            "type": "token_transfer"
+          }
+        ],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/token-transfers"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.calls",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/internal-transactions",
+      "description": "Blockscout: internal-transactions",
+      "payload": {
+        "items": [],
+        "pages": [
+          "https://eth.blockscout.com/api/v2/transactions/0x0efab637e8e1a0503bf7e0e9e28a981bd83827cd2cbf73964938097e4f7e3ec9/internal-transactions"
+        ],
+        "complete": true
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "explorer.abi.0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "source_type": "blockscout",
+      "source_url": "https://eth.blockscout.com/api/v2/smart-contracts/0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "description": "Blockscout: ABI verificada do contrato",
+      "payload": {
+        "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "role": "contract",
+        "abi_source": "explorer",
+        "functions": 32,
+        "events": 11
+      },
+      "confidence": "observed"
+    },
+    {
+      "id": "decoder.input",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística da calldata pela ABI",
+      "payload": {
+        "selector": "0xa9059cbb",
+        "signature": "transfer(address,uint256)",
+        "abi_evidence_ids": [
+          "explorer.abi.0xdac17f958d2ee523a2206206994597c13d831ec7"
+        ],
+        "calldata_evidence_ids": [
+          "explorer.transaction"
+        ]
+      },
+      "confidence": "decoded"
+    },
+    {
+      "id": "decoder.logs",
+      "source_type": "decoder",
+      "source_url": null,
+      "description": "Decodificação determinística dos logs pela ABI do emissor",
+      "payload": {
+        "decoded": [
+          {
+            "index": 441,
+            "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+            "signature": "Transfer(address,address,uint256)"
+          }
+        ]
+      },
+      "confidence": "decoded"
+    }
+  ],
+  "uncertainties": [
+    "RPC não configurado: recibo bruto e consultas de estado indisponíveis. Defina RPC_URL para habilitar essas fontes."
+  ]
+}
