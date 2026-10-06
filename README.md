@@ -13,53 +13,77 @@ LLM          -> raciocina sobre as evidências e explica, citando-as
 
 Coleta, decodificação e diagnóstico são determinísticos e acontecem antes do LLM; o modelo só interpreta e precisa citar evidências existentes. Detalhes técnicos em [`docs/funcionamento.md`](docs/funcionamento.md).
 
-## Setup
+## Como rodar
 
 ### Com Docker (recomendado)
 
 Requer Docker com Compose v2.24+.
 
 ```bash
-cp .env.example .env      # preencha RPC_URL, LLM_PROVIDER, LLM_MODEL e a chave do provedor
 docker compose up --build
 ```
 
-Abra <http://127.0.0.1:3000>. Sem `.env`, a análise funciona com o Blockscout público da Ethereum Mainnet, sem RPC e sem explicação por IA, e informa o que ficou indisponível.
-
 ### Sem Docker
 
-Requisitos: Python 3.12+, Node.js 20.9+ e npm.
+Requer Python 3.12+, Node.js 20.9+ e npm.
 
 ```bash
-cp .env.example .env
+# backend
 python3 -m venv .venv
 .venv/bin/python -m pip install -r backend/requirements-dev.lock
 .venv/bin/python -m pip install -e './backend[dev]'
 .venv/bin/python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000
 
-# em outro terminal
+# frontend, em outro terminal
 cd frontend && npm ci && npm run dev
 ```
 
 No Windows (PowerShell), use `.\.venv\Scripts\python.exe` no lugar de `.venv/bin/python` e `npm.cmd` no lugar de `npm`.
 
-Interface em <http://127.0.0.1:3000>; API em <http://127.0.0.1:8000/docs>.
+Nos dois casos, abra <http://127.0.0.1:3000>. Sem nenhuma configuração extra, a análise já funciona com o Blockscout público da Ethereum Mainnet, mas sem RPC e sem explicação por IA.
 
-### Variáveis de ambiente
+## Variáveis de ambiente (opcional)
+
+Para habilitar RPC e a explicação por IA, crie o `.env` e preencha as variáveis desejadas antes de subir a aplicação:
+
+```bash
+cp .env.example .env
+```
+
+Configuração mínima recomendada:
+
+```bash
+RPC_URL=https://ethereum-rpc.publicnode.com
+LLM_PROVIDER=openai
+LLM_MODEL=gpt-5-mini
+OPENAI_API_KEY=sk-...
+```
 
 | Variável | Uso |
 | --- | --- |
 | `APP_CONFIG` | YAML da rede (padrão: `config/ethereum-mainnet.example.yaml`) |
-| `RPC_URL` | Endpoint RPC, opcional. Ex.: `https://ethereum-rpc.publicnode.com` |
-| `GITHUB_TOKEN` | Opcional; sem ele o GitHub limita a 60 requisições por hora |
-| `LLM_PROVIDER`, `LLM_MODEL` | `openai` ou `gemini` e o modelo (ex.: `gpt-5-mini`). Vazios desativam a explicação |
+| `RPC_URL` | Endpoint RPC. Sem ele, não há leituras de estado |
+| `GITHUB_TOKEN` | Sem ele, o GitHub limita a 60 requisições por hora |
+| `LLM_PROVIDER`, `LLM_MODEL` | `openai` ou `gemini` e o modelo. Vazios desativam a explicação |
 | `OPENAI_API_KEY`, `GEMINI_API_KEY` | Chave do provedor escolhido |
 
 Segredos nunca aparecem em respostas nem em logs.
 
 ## Configuração
 
-Cada rede é um arquivo YAML. Exemplos completos: [`config/ethereum-mainnet.example.yaml`](config/ethereum-mainnet.example.yaml) e [`config/sepolia.example.yaml`](config/sepolia.example.yaml).
+Cada rede é um **perfil** com explorer, RPC, repositórios e LLM. Ele pode ser configurado de duas formas, e as duas usam as mesmas regras de validação.
+
+### Pela interface
+
+A página **Configurações** (botão no canto superior direito) permite criar, editar, duplicar, ativar e excluir perfis, além de **testar a conexão** com explorer, RPC, repositórios e LLM. As mudanças valem para as próximas análises, sem reiniciar o backend.
+
+![Página de Configurações](docs/images/configuracoes.png)
+
+Os perfis ficam em `config/local/` (ignorado pelo Git). Na primeira execução, essa pasta é preenchida a partir dos arquivos em `config/`; apagá-la volta aos exemplos (no Docker, os perfis ficam num volume, e `docker compose down -v` faz o mesmo). Segredos (chave do RPC, token do GitHub, chave do LLM) podem ser definidos pela interface, mas nunca são exibidos.
+
+### Por arquivo
+
+Crie um YAML com a estrutura abaixo e aponte `APP_CONFIG` para ele. Exemplos completos: [`config/ethereum-mainnet.example.yaml`](config/ethereum-mainnet.example.yaml) e [`config/sepolia.example.yaml`](config/sepolia.example.yaml).
 
 ```yaml
 network:
@@ -100,7 +124,7 @@ analysis:
 
 `${VAR}` exige uma variável não vazia; `${VAR:-valor}` define um padrão. Campos desconhecidos ou inválidos impedem a inicialização. Os demais limites de `analysis` têm valores padrão (veja o exemplo completo).
 
-**Trocar de rede:** crie outro YAML e aponte `APP_CONFIG` para ele, ou use a página **Configurações** (ícone de engrenagem), que gerencia perfis de rede sem reiniciar o backend e permite testar a conexão. Os perfis ficam em `config/local/` (ignorado pelo Git); apagar essa pasta volta aos exemplos. Por exemplo, para Base: `chain_id: 8453`, explorer `https://base.blockscout.com`, RPC `https://mainnet.base.org`.
+Como os perfis locais passam a ser a fonte da configuração depois da primeira execução, um novo `APP_CONFIG` só vale com `config/local/` vazio (ou apagado). Para trocar de rede no dia a dia, use a interface. Exemplo de outra rede: Base (`chain_id: 8453`, explorer `https://base.blockscout.com`, RPC `https://mainnet.base.org`).
 
 ## Exemplos
 
