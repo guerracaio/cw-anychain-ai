@@ -5,10 +5,11 @@
 .git
 **/__pycache__
 **/*.pyc
-.pytest_cache
-.ruff_cache
+**/.pytest_cache
+**/.ruff_cache
 **/*.egg-info
 config/local
 frontend
 evals
 examples
+docs

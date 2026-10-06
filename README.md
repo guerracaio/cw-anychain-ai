@@ -60,7 +60,7 @@ docker compose up --build
 
 Abra <http://127.0.0.1:3000>. Sem `.env`, a rede é a Ethereum Mainnet com o Blockscout público, sem RPC e sem explicação por IA. A análise funciona, informando o que ficou indisponível.
 
-- Só o frontend é publicado, em `127.0.0.1:3000`. Ele encaminha `/api/*` para o backend pela rede interna do Compose.
+- Só o frontend é publicado, em `127.0.0.1:3000` (outra porta: `FRONTEND_PORT=3200 docker compose up`). Ele encaminha `/api/*` para o backend pela rede interna do Compose.
 - Os perfis criados pela interface ficam no volume `profiles`. `docker compose down -v` apaga esse volume e volta aos exemplos.
 - **Para editar configurações pela interface no Docker, defina `ADMIN_TOKEN` no `.env`.** Sem ele, a edição só é aceita de loopback, e no Docker as requisições chegam pelo container do frontend. Nesse caso, a página de configurações abre em modo somente leitura.
 
